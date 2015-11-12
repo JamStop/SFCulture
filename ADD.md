@@ -8,26 +8,76 @@ Most, if not all, people have a distinct culture that they identify with. Whethe
 
 
 ##Experience
+The MVP is simple, as we only need a clean way for the user to choose their community, browse through their peers, and ultimately connect with them. The app's design will be clean and flat, and will be as intuitive as possible.
 
+The user opens with a series of info screens, which leads to the user signing in through Facebook. The user is then presented with culture selection screen (we will only offer a single culture per user at the moment, for onboarding purposes), and then is taken to a tab view controller with 3 tabs: Browse, chat, and profile. 
+
+The experience overall should be minimal, and because the only action available to users is "chat", people are naturally forced to interact in a more personal form than if a news feed or the likes were available. 
+
+The profile is linked to Facebook, but the user is given the option to choose their own photo (if they don't like the Facebook preloaded one), and can customize information about themselves. Some things like age, location, and some other traits are locked in, while others like tag line, hobbies, etc. are customizable.
 
 
 ##Technical
 
 ####External Services
+Facebook SDK
+Firebase (For chat service, temporary for now; we need to make own backend later)
 
 
 ####Screens
+Splash Screen/Landing Screen
+Info Screens
+Login/Signup with Facebook Screen
+Tab Bar
+Browse people screen (popup with view profile and chat)
+Profile screen (personal)
+Profile screen (others)
+Chats Screen
+1 on 1 Chat Screen
 
 
 
 ####Views / View Controllers/ Classes
+Onboard Page View Controller
+Onboard View 1
+Onboard View 2
+Onboard View 3
+
+Culture Selection View Controller
+Culture Select View
+Culture Add View
+
+Login View Controller
+Login View
+
+Main Tab Bar View Controller
+Browse View
+Chats View
+Chat View
+Profile View
+Other People Profile View
+
+Custom Views
+Other People Profile Icon View
 
 
 
 ####Data Models
+User
+Chat
+Chats
+Culture
 
 
 
-##MVP Milestones
+##MVP Milestones (Generous time for everything in theory)
+Week 1: Prep everything
+Week 2: Prep and Login
+Week 3: Login and server setup
+Week 4: Server and custom views
+Week 5: Views and tab bar
+Week 6: Browse
+Week 7: Chat
+Week 8: Profile
 
 

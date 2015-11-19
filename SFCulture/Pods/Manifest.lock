@@ -1,7 +1,35 @@
 PODS:
   - Alamofire (3.1.2)
+  - Bolts (1.5.0):
+    - Bolts/AppLinks (= 1.5.0)
+    - Bolts/Tasks (= 1.5.0)
+  - Bolts/AppLinks (1.5.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.5.0)
   - DateTools (1.7.0)
+  - Facebook-iOS-SDK (3.24.1):
+    - Bolts (~> 1.2)
+  - FBSDKCoreKit (4.8.0):
+    - Bolts (~> 1.1)
+    - FBSDKCoreKit/arc (= 4.8.0)
+    - FBSDKCoreKit/no-arc (= 4.8.0)
+  - FBSDKCoreKit/arc (4.8.0):
+    - Bolts (~> 1.1)
+  - FBSDKCoreKit/no-arc (4.8.0):
+    - Bolts (~> 1.1)
+    - FBSDKCoreKit/arc
+  - FBSDKLoginKit (4.8.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.8.0):
+    - FBSDKCoreKit
+  - Firebase (2.4.2)
   - JSONHelper (1.6.1)
+  - Parse (1.9.1):
+    - Bolts/Tasks (>= 1.4.0)
+  - ParseFacebookUtils (1.9.1):
+    - Bolts/Tasks (~> 1.5)
+    - Facebook-iOS-SDK (~> 3.24)
+    - Parse (~> 1.9)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -10,14 +38,28 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DateTools
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
+  - Firebase
   - JSONHelper
+  - Parse
+  - ParseFacebookUtils
   - SDWebImage
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
+  Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  Facebook-iOS-SDK: 08689c2690dc4e087b9c8e171e48667608b72a2a
+  FBSDKCoreKit: 66a935d17b6e00b6b64e604f2eb9b72c9ab7deb8
+  FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
+  FBSDKShareKit: e7577ee3adf80fc04fb656dd133fbb522250672b
+  Firebase: 5e898ed5012c81d28ca5fae1113c6b61a172bc6d
   JSONHelper: 2ffa958e1cb6f6eed52478d6239d8a945055d368
+  Parse: 54a965c8c19a6dde90284ab654dbcc77ef8c001b
+  ParseFacebookUtils: 14016713d460f605e8b4834cd616f19339d7e9c0
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 

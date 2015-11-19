@@ -6,6 +6,11 @@ use_frameworks!
 pod 'SVProgressHUD'
 pod 'Alamofire'
 pod 'JSONHelper'
-pod 'SDWebImage’
+pod 'SDWebImage'
 pod 'DateTools'
-
+pod 'Parse'
+pod 'ParseFacebookUtils'
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+pod 'FBSDKShareKit'
+pod 'Firebase'

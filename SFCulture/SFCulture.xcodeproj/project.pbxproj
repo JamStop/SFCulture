@@ -16,6 +16,8 @@
 		BFF3C4161BFE6C4A0087F60D /* SFCultureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4151BFE6C4A0087F60D /* SFCultureTests.swift */; };
 		BFF3C4211BFE6C4A0087F60D /* SFCultureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4201BFE6C4A0087F60D /* SFCultureUITests.swift */; };
 		BFF3C4361BFE78ED0087F60D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4351BFE78ED0087F60D /* Info.plist */; };
+		BFF3C4381BFFB0D90087F60D /* ParseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4371BFFB0D90087F60D /* ParseLoginHelper.swift */; };
+		BFF3C43A1BFFB1A40087F60D /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4391BFFB1A40087F60D /* ErrorHandling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		BFF3C4201BFE6C4A0087F60D /* SFCultureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFCultureUITests.swift; sourceTree = "<group>"; };
 		BFF3C4221BFE6C4A0087F60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF3C4351BFE78ED0087F60D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SFCulture/Info.plist; sourceTree = SOURCE_ROOT; };
+		BFF3C4371BFFB0D90087F60D /* ParseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoginHelper.swift; sourceTree = "<group>"; };
+		BFF3C4391BFFB1A40087F60D /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 		BFF3C42E1BFE78B80087F60D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BFF3C4371BFFB0D90087F60D /* ParseLoginHelper.swift */,
+				BFF3C4391BFFB1A40087F60D /* ErrorHandling.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -374,6 +380,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF3C4031BFE6C4A0087F60D /* ViewController.swift in Sources */,
+				BFF3C43A1BFFB1A40087F60D /* ErrorHandling.swift in Sources */,
+				BFF3C4381BFFB0D90087F60D /* ParseLoginHelper.swift in Sources */,
 				BFF3C4011BFE6C4A0087F60D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

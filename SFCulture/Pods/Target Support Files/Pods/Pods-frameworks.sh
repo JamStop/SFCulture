@@ -90,12 +90,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/FBSDKCoreKit.framework"
   install_framework "Pods/FBSDKLoginKit.framework"
   install_framework "Pods/Firebase.framework"
-  install_framework "Pods/JSONHelper.framework"
   install_framework "Pods/Parse.framework"
   install_framework "Pods/ParseFacebookUtilsV4.framework"
   install_framework "Pods/ParseUI.framework"
   install_framework "Pods/SDWebImage.framework"
   install_framework "Pods/SVProgressHUD.framework"
+  install_framework "Pods/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Alamofire.framework"
@@ -104,10 +104,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/FBSDKCoreKit.framework"
   install_framework "Pods/FBSDKLoginKit.framework"
   install_framework "Pods/Firebase.framework"
-  install_framework "Pods/JSONHelper.framework"
   install_framework "Pods/Parse.framework"
   install_framework "Pods/ParseFacebookUtilsV4.framework"
   install_framework "Pods/ParseUI.framework"
   install_framework "Pods/SDWebImage.framework"
   install_framework "Pods/SVProgressHUD.framework"
+  install_framework "Pods/SwiftyJSON.framework"
 fi

@@ -5,7 +5,7 @@ use_frameworks!
 
 pod 'SVProgressHUD'
 pod 'Alamofire'
-pod 'JSONHelper'
+pod 'SwiftyJSON'
 pod 'SDWebImage'
 pod 'DateTools'
 pod 'Firebase'

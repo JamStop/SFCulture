@@ -18,7 +18,12 @@ PODS:
     - FBSDKCoreKit/arc
   - FBSDKLoginKit (4.8.0):
     - FBSDKCoreKit
+  - FBSDKShareKit (4.8.0):
+    - FBSDKCoreKit
   - Firebase (2.4.3)
+  - JSQMessagesViewController (7.2.0):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
   - Parse (1.8.5):
     - Bolts/Tasks (>= 1.2.2)
   - ParseFacebookUtilsV4 (1.8.5):
@@ -38,11 +43,14 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DateTools
-  - FBSDKCoreKit (~> 4.6.0)
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
   - Firebase
-  - Parse (~> 1.8.5)
-  - ParseFacebookUtilsV4 (~> 1.8.5)
-  - ParseUI (~> 1.1.6)
+  - JSQMessagesViewController
+  - Parse
+  - ParseFacebookUtilsV4
+  - ParseUI
   - SDWebImage
   - SVProgressHUD
   - SwiftyJSON
@@ -53,7 +61,10 @@ SPEC CHECKSUMS:
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   FBSDKCoreKit: 9954492d90c5fd65ae831395697a1660360d61f1
   FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
+  FBSDKShareKit: e7577ee3adf80fc04fb656dd133fbb522250672b
   Firebase: 48179995b561e2262c5d4060ecdffca45fbbff8b
+  JSQMessagesViewController: 73cab48aa92fc2d512f3b6724f3425cc47a19eb5
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   Parse: 17ad8e0677ed682f7f00503860fcda0f4eb74168
   ParseFacebookUtilsV4: cc51857cf984c6fc743e7f17c2ddebdb6f02f963
   ParseUI: 8a22e448c03f825203d8c379c80523517f68baa3

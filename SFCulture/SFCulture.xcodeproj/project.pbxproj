@@ -95,6 +95,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BF2D9C991C10D1B800A11A1A /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
 		BFF3C3F41BFE6C490087F60D = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +127,7 @@
 		BFF3C3FF1BFE6C4A0087F60D /* SFCulture */ = {
 			isa = PBXGroup;
 			children = (
+				BF2D9C991C10D1B800A11A1A /* viewModels */,
 				BFF3C42E1BFE78B80087F60D /* Helpers */,
 				BFF3C42F1BFE78B80087F60D /* Models */,
 				BFF3C4301BFE78B80087F60D /* Supporting Files */,

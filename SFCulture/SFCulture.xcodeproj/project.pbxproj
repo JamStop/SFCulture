@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		594EECFD6B606520E9BDA7F6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A59F06BD90D882A787115AE /* Pods.framework */; };
+		BF2D9C971C10CDFA00A11A1A /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2D9C961C10CDFA00A11A1A /* OnboardViewController.swift */; };
 		BF54F9DF1C0975E9004E2DFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F9DE1C0975E9004E2DFD /* User.swift */; };
 		BFF3C4011BFE6C4A0087F60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */; };
 		BFF3C4061BFE6C4A0087F60D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4041BFE6C4A0087F60D /* Login.storyboard */; };
@@ -41,6 +42,7 @@
 		58F74DE16CDB4BEAB2897932 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8A59F06BD90D882A787115AE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99AA80EAC67FE7F358CB475 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BF2D9C961C10CDFA00A11A1A /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
 		BF54F9DE1C0975E9004E2DFD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BFF3C3FD1BFE6C4A0087F60D /* SFCulture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFCulture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		BFF3C4321BFE78B80087F60D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF2D9C961C10CDFA00A11A1A /* OnboardViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2D9C971C10CDFA00A11A1A /* OnboardViewController.swift in Sources */,
 				BF54F9DF1C0975E9004E2DFD /* User.swift in Sources */,
 				BFF3C43A1BFFB1A40087F60D /* ErrorHandling.swift in Sources */,
 				BFF3C4381BFFB0D90087F60D /* ParseLoginHelper.swift in Sources */,

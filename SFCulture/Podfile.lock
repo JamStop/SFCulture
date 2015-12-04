@@ -34,6 +34,11 @@ PODS:
   - ParseUI (1.1.6):
     - Bolts/Tasks (~> 1.2)
     - Parse (~> 1.8)
+  - RxBlocking (2.0.0-beta.3):
+    - RxSwift (~> 2.0.0-beta)
+  - RxCocoa (2.0.0-beta.3):
+    - RxSwift (~> 2.0.0-beta)
+  - RxSwift (2.0.0-beta.3)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -51,6 +56,9 @@ DEPENDENCIES:
   - Parse
   - ParseFacebookUtilsV4
   - ParseUI
+  - RxBlocking (~> 2.0.0-beta)
+  - RxCocoa (~> 2.0.0-beta)
+  - RxSwift (~> 2.0.0-beta)
   - SDWebImage
   - SVProgressHUD
   - SwiftyJSON
@@ -68,6 +76,9 @@ SPEC CHECKSUMS:
   Parse: 17ad8e0677ed682f7f00503860fcda0f4eb74168
   ParseFacebookUtilsV4: cc51857cf984c6fc743e7f17c2ddebdb6f02f963
   ParseUI: 8a22e448c03f825203d8c379c80523517f68baa3
+  RxBlocking: 331f8bdedf77198f8ff1a37f09c492f1f4f631e5
+  RxCocoa: 1472006304b296d03c847f78b21384523cc4902e
+  RxSwift: 19fbe885b404d1d36d42ac8535134739a9b42952
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3

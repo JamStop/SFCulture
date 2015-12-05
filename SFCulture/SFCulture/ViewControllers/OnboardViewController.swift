@@ -15,8 +15,13 @@ class OnboardViewController: UIPageViewController {
 
         // Do any additional setup after loading the view.
         
-        LoadingHelper.showLoadingIndicator("Checking Facebook details...", view: self.view)
-        
+        showLoadingIndicator("Checking Facebook details...", view: self.view)
+    }
+    
+    func showLoadingIndicator(title: String, view: UIView){
+        JHProgressHUD.sharedHUD.showInView(view, withHeader: "", andFooter: title)
     }
 
 }
+
+

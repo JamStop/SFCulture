@@ -21,15 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
 
-        Parse.enableLocalDatastore()
-        Parse.setApplicationId("huCV5qt0PKqorf1aYHbv93jQo7nWZNdvZtP58t9w",
-            clientKey: "6NbhqNdcQiuQd7wGaXS3XFLnPYdGGTMc0CwQuVhz")
-        
-        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
-
-        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
-        
-        let user = PFUser.currentUser()
+//        Parse.enableLocalDatastore()
+//        Parse.setApplicationId("huCV5qt0PKqorf1aYHbv93jQo7nWZNdvZtP58t9w",
+//            clientKey: "6NbhqNdcQiuQd7wGaXS3XFLnPYdGGTMc0CwQuVhz")
+//        
+//        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+//
+//        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+//        
+//        let user = PFUser.currentUser()
         
         return true
     }

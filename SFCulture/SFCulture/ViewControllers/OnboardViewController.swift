@@ -14,6 +14,9 @@ class OnboardViewController: UIPageViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        LoadingHelper.showLoadingIndicator("Checking Facebook details...", view: self.view)
+        
     }
 
 }

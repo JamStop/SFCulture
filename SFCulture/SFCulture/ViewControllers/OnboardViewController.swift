@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class OnboardViewController: UIPageViewController {
 
@@ -20,6 +22,10 @@ class OnboardViewController: UIPageViewController {
     
     func showLoadingIndicator(title: String, view: UIView){
         JHProgressHUD.sharedHUD.showInView(view, withHeader: "", andFooter: title)
+    }
+    
+    func hideLoadingIndicator(){
+        JHProgressHUD.sharedHUD.hide()
     }
 
 }

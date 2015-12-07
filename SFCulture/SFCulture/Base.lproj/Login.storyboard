@@ -3,23 +3,25 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Onboard View Controller-->
+        <!--Onboard Page View Controller-->
         <scene sceneID="Dyu-7P-3p5">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="n1o-iv-mKr" customClass="OnboardViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="n1o-iv-mKr" customClass="OnboardPageViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZX-4A-GrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="297"/>
+            <point key="canvasLocation" x="872.5" y="296.625"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="kfM-lu-TGF">
             <objects>
-                <viewController id="Dys-mC-dhy" sceneMemberID="viewController">
+                <viewController id="Dys-mC-dhy" customClass="LoginViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b6M-ho-Oh3"/>
                         <viewControllerLayoutGuide type="bottom" id="c8a-CW-GGe"/>
@@ -34,35 +36,71 @@
                                     <segue destination="n1o-iv-mKr" kind="embed" id="btp-Zw-u7p"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gje-2r-3yQ" customClass="LoginWithFacebook" customModule="SFCulture" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gje-2r-3yQ" secondAttribute="height" multiplier="36:7" id="Q0k-3P-6nV">
+                                        <variation key="heightClass=regular" constant="51.428571428571416"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Q0k-3P-6nV"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Q0k-3P-6nV"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="c8a-CW-GGe" firstAttribute="top" secondItem="6eq-Tx-FmQ" secondAttribute="bottom" id="Ekl-Ba-HVK"/>
+                            <constraint firstItem="Gje-2r-3yQ" firstAttribute="width" secondItem="6eq-Tx-FmQ" secondAttribute="width" multiplier="0.77" id="Eos-ct-0JR"/>
                             <constraint firstAttribute="trailing" secondItem="6eq-Tx-FmQ" secondAttribute="trailing" id="QYY-is-pXU"/>
                             <constraint firstItem="6eq-Tx-FmQ" firstAttribute="leading" secondItem="LIJ-hu-BGh" secondAttribute="leading" id="ayv-7i-tIK"/>
+                            <constraint firstItem="c8a-CW-GGe" firstAttribute="top" secondItem="Gje-2r-3yQ" secondAttribute="bottom" constant="55" id="hf6-3c-aHm">
+                                <variation key="heightClass=regular" constant="65"/>
+                            </constraint>
+                            <constraint firstItem="Gje-2r-3yQ" firstAttribute="top" secondItem="6eq-Tx-FmQ" secondAttribute="bottom" constant="-110" id="qat-nY-Tbx"/>
+                            <constraint firstItem="Gje-2r-3yQ" firstAttribute="centerX" secondItem="LIJ-hu-BGh" secondAttribute="centerX" id="vIz-7C-ucX"/>
                             <constraint firstItem="6eq-Tx-FmQ" firstAttribute="top" secondItem="b6M-ho-Oh3" secondAttribute="bottom" id="xHt-5U-6Mo"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="6eq-Tx-FmQ"/>
+                                <exclude reference="Gje-2r-3yQ"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="QYY-is-pXU"/>
                                 <exclude reference="ayv-7i-tIK"/>
                                 <exclude reference="xHt-5U-6Mo"/>
+                                <exclude reference="Eos-ct-0JR"/>
+                                <exclude reference="qat-nY-Tbx"/>
+                                <exclude reference="vIz-7C-ucX"/>
                                 <exclude reference="Ekl-Ba-HVK"/>
+                                <exclude reference="hf6-3c-aHm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="6eq-Tx-FmQ"/>
+                                <include reference="Gje-2r-3yQ"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="QYY-is-pXU"/>
                                 <include reference="ayv-7i-tIK"/>
                                 <include reference="xHt-5U-6Mo"/>
+                                <include reference="Eos-ct-0JR"/>
+                                <exclude reference="qat-nY-Tbx"/>
+                                <include reference="vIz-7C-ucX"/>
                                 <include reference="Ekl-Ba-HVK"/>
+                                <include reference="hf6-3c-aHm"/>
                             </mask>
                         </variation>
                     </view>

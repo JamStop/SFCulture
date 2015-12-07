@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 @IBDesignable
-class LoginWithFacebook: UIView {
+class LoginWithFacebook: UIButton {
     
     var view: UIView!
 

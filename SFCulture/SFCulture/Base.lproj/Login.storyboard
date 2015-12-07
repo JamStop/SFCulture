@@ -8,10 +8,32 @@
         <!--Onboard View Controller-->
         <scene sceneID="Dyu-7P-3p5">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="n1o-iv-mKr" customClass="OnboardViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="n1o-iv-mKr" customClass="OnboardViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZX-4A-GrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="767" y="297"/>
+        </scene>
+        <!--Landing View Controller-->
+        <scene sceneID="PLa-YC-6q0">
+            <objects>
+                <viewController id="YC4-0H-d6l" customClass="LandingViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hCg-GX-PHY"/>
+                        <viewControllerLayoutGuide type="bottom" id="OLG-vf-HxU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X9O-Cz-fdR">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jG1-ZF-cyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="920.25"/>
         </scene>
     </scenes>
 </document>

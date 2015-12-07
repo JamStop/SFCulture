@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class OnboardViewController: UIPageViewController {
+class OnboardPageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,7 @@ class OnboardViewController: UIPageViewController {
         // Do any additional setup after loading the view.
         dataSource = self
         delegate = self
+        
         
         
 //        showLoadingIndicator("Checking Facebook details...", view: self.view)
@@ -37,7 +38,7 @@ class OnboardViewController: UIPageViewController {
 
 }
 
-extension OnboardViewController: UIPageViewControllerDataSource {
+extension OnboardPageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         return nil
@@ -47,9 +48,16 @@ extension OnboardViewController: UIPageViewControllerDataSource {
         return nil
     }
     
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 3
+    }
+    
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
 }
 
-extension OnboardViewController: UIPageViewControllerDelegate {
+extension OnboardPageViewController: UIPageViewControllerDelegate {
     func pageViewControllerSupportedInterfaceOrientations(pageViewController: UIPageViewController) -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.Portrait
     }

@@ -12,7 +12,6 @@
 		BF2D9C9E1C12BC6E00A11A1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2D9C9D1C12BC6E00A11A1A /* Constants.swift */; };
 		BF2D9CA01C12BD0400A11A1A /* JHProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2D9C9F1C12BD0400A11A1A /* JHProgressHUD.swift */; };
 		BF2D9CA21C12BD3700A11A1A /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2D9CA11C12BD3700A11A1A /* CircleProgressView.swift */; };
-		BF2D9CA61C15120D00A11A1A /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2D9CA51C15120C00A11A1A /* LandingViewController.swift */; };
 		BF2D9CA81C151E1000A11A1A /* LoginWithFacebook.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2D9CA71C151E1000A11A1A /* LoginWithFacebook.xib */; };
 		BF2D9CAA1C151F5300A11A1A /* LoginWithFacebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2D9CA91C151F5300A11A1A /* LoginWithFacebook.swift */; };
 		BF2D9CAC1C162B1100A11A1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2D9CAB1C162B1100A11A1A /* LoginViewController.swift */; };
@@ -53,7 +52,6 @@
 		BF2D9C9D1C12BC6E00A11A1A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF2D9C9F1C12BD0400A11A1A /* JHProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHProgressHUD.swift; sourceTree = "<group>"; };
 		BF2D9CA11C12BD3700A11A1A /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
-		BF2D9CA51C15120C00A11A1A /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		BF2D9CA71C151E1000A11A1A /* LoginWithFacebook.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWithFacebook.xib; sourceTree = "<group>"; };
 		BF2D9CA91C151F5300A11A1A /* LoginWithFacebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWithFacebook.swift; sourceTree = "<group>"; };
 		BF2D9CAB1C162B1100A11A1A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				BF2D9C961C10CDFA00A11A1A /* OnboardViewController.swift */,
-				BF2D9CA51C15120C00A11A1A /* LandingViewController.swift */,
 				BF2D9CAB1C162B1100A11A1A /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
@@ -428,7 +425,6 @@
 				BF2D9CA01C12BD0400A11A1A /* JHProgressHUD.swift in Sources */,
 				BF2D9CA21C12BD3700A11A1A /* CircleProgressView.swift in Sources */,
 				BFF3C4011BFE6C4A0087F60D /* AppDelegate.swift in Sources */,
-				BF2D9CA61C15120D00A11A1A /* LandingViewController.swift in Sources */,
 				BF2D9C9E1C12BC6E00A11A1A /* Constants.swift in Sources */,
 				BF2D9CAC1C162B1100A11A1A /* LoginViewController.swift in Sources */,
 			);

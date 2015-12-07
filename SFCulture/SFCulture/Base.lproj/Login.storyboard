@@ -27,6 +27,7 @@
                         <viewControllerLayoutGuide type="bottom" id="c8a-CW-GGe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LIJ-hu-BGh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eq-Tx-FmQ">
@@ -77,14 +78,14 @@
                                 <exclude reference="Gje-2r-3yQ"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Ekl-Ba-HVK"/>
+                                <exclude reference="hf6-3c-aHm"/>
                                 <exclude reference="QYY-is-pXU"/>
                                 <exclude reference="ayv-7i-tIK"/>
                                 <exclude reference="xHt-5U-6Mo"/>
                                 <exclude reference="Eos-ct-0JR"/>
                                 <exclude reference="qat-nY-Tbx"/>
                                 <exclude reference="vIz-7C-ucX"/>
-                                <exclude reference="Ekl-Ba-HVK"/>
-                                <exclude reference="hf6-3c-aHm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -93,14 +94,14 @@
                                 <include reference="Gje-2r-3yQ"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Ekl-Ba-HVK"/>
+                                <include reference="hf6-3c-aHm"/>
                                 <include reference="QYY-is-pXU"/>
                                 <include reference="ayv-7i-tIK"/>
                                 <include reference="xHt-5U-6Mo"/>
                                 <include reference="Eos-ct-0JR"/>
                                 <exclude reference="qat-nY-Tbx"/>
                                 <include reference="vIz-7C-ucX"/>
-                                <include reference="Ekl-Ba-HVK"/>
-                                <include reference="hf6-3c-aHm"/>
                             </mask>
                         </variation>
                     </view>
@@ -110,24 +111,98 @@
             </objects>
             <point key="canvasLocation" x="322.5" y="296.625"/>
         </scene>
-        <!--Landing View Controller-->
+        <!--Landing-->
         <scene sceneID="PLa-YC-6q0">
             <objects>
-                <viewController id="YC4-0H-d6l" customClass="LandingViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Landing1" title="Landing" id="YC4-0H-d6l" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hCg-GX-PHY"/>
                         <viewControllerLayoutGuide type="bottom" id="OLG-vf-HxU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="X9O-Cz-fdR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landing1" translatesAutoresizingMaskIntoConstraints="NO" id="Xsc-lW-DYK">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bring yourself closer to your roots" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEp-4W-Rlm">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="0.23529411759999999" blue="0.23529411759999999" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reconnect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ts8-oL-ykg">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="0.23529411759999999" blue="0.23529411759999999" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ts8-oL-ykg" firstAttribute="top" secondItem="hCg-GX-PHY" secondAttribute="bottom" constant="30" id="Ccn-0K-Wbz"/>
+                            <constraint firstAttribute="trailing" secondItem="Xsc-lW-DYK" secondAttribute="trailing" id="DYU-aD-UWq"/>
+                            <constraint firstItem="eEp-4W-Rlm" firstAttribute="centerX" secondItem="X9O-Cz-fdR" secondAttribute="centerX" id="NdP-UG-UUO"/>
+                            <constraint firstItem="OLG-vf-HxU" firstAttribute="top" secondItem="eEp-4W-Rlm" secondAttribute="bottom" constant="150" id="XME-aE-dVV"/>
+                            <constraint firstItem="Xsc-lW-DYK" firstAttribute="top" secondItem="hCg-GX-PHY" secondAttribute="bottom" id="aEM-AW-xVx">
+                                <variation key="heightClass=regular" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="Xsc-lW-DYK" firstAttribute="leading" secondItem="X9O-Cz-fdR" secondAttribute="leading" id="eYu-T7-1ed"/>
+                            <constraint firstItem="OLG-vf-HxU" firstAttribute="top" secondItem="Xsc-lW-DYK" secondAttribute="bottom" id="sMg-9V-dNr"/>
+                            <constraint firstItem="Ts8-oL-ykg" firstAttribute="centerX" secondItem="X9O-Cz-fdR" secondAttribute="centerX" id="u1J-WT-bSY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Xsc-lW-DYK"/>
+                                <exclude reference="eEp-4W-Rlm"/>
+                                <exclude reference="Ts8-oL-ykg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="XME-aE-dVV"/>
+                                <exclude reference="sMg-9V-dNr"/>
+                                <exclude reference="Ccn-0K-Wbz"/>
+                                <exclude reference="u1J-WT-bSY"/>
+                                <exclude reference="NdP-UG-UUO"/>
+                                <exclude reference="DYU-aD-UWq"/>
+                                <exclude reference="aEM-AW-xVx"/>
+                                <exclude reference="eYu-T7-1ed"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="Xsc-lW-DYK"/>
+                                <include reference="eEp-4W-Rlm"/>
+                                <include reference="Ts8-oL-ykg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="XME-aE-dVV"/>
+                                <include reference="sMg-9V-dNr"/>
+                                <include reference="Ccn-0K-Wbz"/>
+                                <include reference="u1J-WT-bSY"/>
+                                <include reference="NdP-UG-UUO"/>
+                                <include reference="DYU-aD-UWq"/>
+                                <include reference="aEM-AW-xVx"/>
+                                <include reference="eYu-T7-1ed"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jG1-ZF-cyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="777" y="920.25"/>
+            <point key="canvasLocation" x="322.5" y="852.375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Landing1" width="375" height="667"/>
+    </resources>
 </document>

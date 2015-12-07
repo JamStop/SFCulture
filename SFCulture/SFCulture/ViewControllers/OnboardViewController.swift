@@ -19,14 +19,17 @@ class OnboardPageViewController: UIPageViewController {
         dataSource = self
         delegate = self
         
-        
+        setViewControllers([getFirstLandingViewController()], direction: .Forward, animated: false, completion: nil)
         
 //        showLoadingIndicator("Checking Facebook details...", view: self.view)
         
         
     }
     
-    
+    func getFirstLandingViewController() -> UIViewController {
+        return storyboard!.instantiateViewControllerWithIdentifier("Landing1")
+
+    }
     
     func showLoadingIndicator(title: String, view: UIView){
         JHProgressHUD.sharedHUD.showInView(view, withHeader: "", andFooter: title)
@@ -37,6 +40,8 @@ class OnboardPageViewController: UIPageViewController {
     }
 
 }
+
+
 
 extension OnboardPageViewController: UIPageViewControllerDataSource {
     

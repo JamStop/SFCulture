@@ -46,11 +46,11 @@ class OnboardPageViewController: UIPageViewController {
 extension OnboardPageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        return nil
+        return getFirstLandingViewController()
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        return nil
+        return getFirstLandingViewController()
     }
     
 //    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {

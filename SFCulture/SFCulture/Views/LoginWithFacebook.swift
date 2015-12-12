@@ -9,7 +9,6 @@
 import UIKit
 import Foundation
 
-@IBDesignable
 class LoginWithFacebook: UIButton {
     
     var view: UIView!

@@ -66,7 +66,9 @@
                             </constraint>
                             <constraint firstItem="Gje-2r-3yQ" firstAttribute="top" secondItem="6eq-Tx-FmQ" secondAttribute="bottom" constant="-110" id="qat-nY-Tbx"/>
                             <constraint firstItem="Gje-2r-3yQ" firstAttribute="centerX" secondItem="LIJ-hu-BGh" secondAttribute="centerX" id="vIz-7C-ucX"/>
-                            <constraint firstItem="6eq-Tx-FmQ" firstAttribute="top" secondItem="b6M-ho-Oh3" secondAttribute="bottom" id="xHt-5U-6Mo"/>
+                            <constraint firstItem="6eq-Tx-FmQ" firstAttribute="top" secondItem="b6M-ho-Oh3" secondAttribute="bottom" id="xHt-5U-6Mo">
+                                <variation key="heightClass=regular" constant="-20"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -102,6 +104,9 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="loginWithFacebookButton" destination="Gje-2r-3yQ" id="RZu-GL-yMS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VG8-Hm-uuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

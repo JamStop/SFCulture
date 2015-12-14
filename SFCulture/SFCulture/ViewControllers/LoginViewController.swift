@@ -13,8 +13,10 @@ import RxSwift
 
 class LoginViewController: UIViewController {
     
+    private let loginHelper = FirebaseLoginHelper()
+    
     // MARK: Outlets
-    @IBOutlet weak var loginWithFacebookButton: UIButton!
+    @IBOutlet weak var loginWithFacebookButton: LoginWithFacebook!
     
     // Keeps the Rx resources for deinit()
     let disposeBag = DisposeBag()
@@ -24,7 +26,15 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        self.loginWithFacebookButton.cellButton.addTarget(self, action: "loginWithFacebookButtonPressed:", forControlEvents: .TouchUpInside)
         
+//        print("init")
+        
+    }
+    
+    func loginWithFacebookButtonPressed(sender: UIButton) {
+        print("pressed")
+        loginHelper.login(self)
     }
 
 

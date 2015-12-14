@@ -91,6 +91,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/FBSDKLoginKit.framework"
   install_framework "Pods/FBSDKShareKit.framework"
   install_framework "Pods/Firebase.framework"
+  install_framework "Pods/Gloss.framework"
   install_framework "Pods/JSQMessagesViewController.framework"
   install_framework "Pods/JSQSystemSoundPlayer.framework"
   install_framework "Pods/Parse.framework"
@@ -101,7 +102,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/RxSwift.framework"
   install_framework "Pods/SDWebImage.framework"
   install_framework "Pods/SVProgressHUD.framework"
-  install_framework "Pods/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Alamofire.framework"
@@ -111,6 +111,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/FBSDKLoginKit.framework"
   install_framework "Pods/FBSDKShareKit.framework"
   install_framework "Pods/Firebase.framework"
+  install_framework "Pods/Gloss.framework"
   install_framework "Pods/JSQMessagesViewController.framework"
   install_framework "Pods/JSQSystemSoundPlayer.framework"
   install_framework "Pods/Parse.framework"
@@ -121,5 +122,4 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/RxSwift.framework"
   install_framework "Pods/SDWebImage.framework"
   install_framework "Pods/SVProgressHUD.framework"
-  install_framework "Pods/SwiftyJSON.framework"
 fi

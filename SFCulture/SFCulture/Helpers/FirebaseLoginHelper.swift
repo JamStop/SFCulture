@@ -33,9 +33,11 @@ class FirebaseLoginHelper {
                             print("Login failed. \(error)")
                         } else {
                             print("Logged in! \(authData)")
+                            print(authData.provider)
                         }
                 })
             }
         })
     }
+
 }

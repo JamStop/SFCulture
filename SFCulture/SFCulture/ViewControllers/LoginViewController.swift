@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         
         self.loginWithFacebookButton.cellButton.addTarget(self, action: "loginWithFacebookButtonPressed:", forControlEvents: .TouchUpInside)
         
-//        print("init")
+        
         
     }
     

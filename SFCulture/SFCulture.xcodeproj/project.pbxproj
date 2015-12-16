@@ -24,7 +24,6 @@
 		BFF3C40B1BFE6C4A0087F60D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4091BFE6C4A0087F60D /* LaunchScreen.storyboard */; };
 		BFF3C4161BFE6C4A0087F60D /* SFCultureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4151BFE6C4A0087F60D /* SFCultureTests.swift */; };
 		BFF3C4211BFE6C4A0087F60D /* SFCultureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4201BFE6C4A0087F60D /* SFCultureUITests.swift */; };
-		BFF3C4361BFE78ED0087F60D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4351BFE78ED0087F60D /* Info.plist */; };
 		BFF3C43A1BFFB1A40087F60D /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4391BFFB1A40087F60D /* ErrorHandling.swift */; };
 /* End PBXBuildFile section */
 
@@ -302,7 +301,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Augmented Humanity";
 				TargetAttributes = {
 					BFF3C3FC1BFE6C490087F60D = {
@@ -346,7 +345,6 @@
 				BF2D9CA81C151E1000A11A1A /* LoginWithFacebook.xib in Resources */,
 				BFF3C40B1BFE6C4A0087F60D /* LaunchScreen.storyboard in Resources */,
 				BFF3C4081BFE6C4A0087F60D /* Assets.xcassets in Resources */,
-				BFF3C4361BFE78ED0087F60D /* Info.plist in Resources */,
 				BFF3C4061BFE6C4A0087F60D /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

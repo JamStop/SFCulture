@@ -39,7 +39,7 @@ class FirebaseLoginHelper {
                             print(authData.provider)
                             
                             
-                            self.getFBUserData(authData.uid)
+                            self.getFBUserData()
                         }
                 })
             }
@@ -47,14 +47,18 @@ class FirebaseLoginHelper {
     }
     
     
-    func getFBUserData(userID: String){
+    func getFBUserData(){
         if((FBSDKAccessToken.currentAccessToken()) != nil){
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
-                    print(result)
+                    let userData : NSDictionary = result as! NSDictionary
+                    print(userData)
                 }
             })
         }
     }
+    
+    
 
 }
+

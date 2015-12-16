@@ -27,6 +27,7 @@ class FirebaseLoginHelper {
                 print("Facebook login was cancelled.")
             } else {
                 let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+                print(facebookResult)
                 firebase.authWithOAuthProvider("facebook", token: accessToken,
                     withCompletionBlock: { error, authData in
                         if error != nil {
@@ -34,10 +35,24 @@ class FirebaseLoginHelper {
                         } else {
                             print("Logged in! \(authData)")
                             print(authData.provider)
+                            
+                            
+                            self.getFBUserData()
                         }
                 })
             }
         })
+    }
+    
+    
+    func getFBUserData(){
+        if((FBSDKAccessToken.currentAccessToken()) != nil){
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
+                if (error == nil){
+                    print(result)
+                }
+            })
+        }
     }
 
 }

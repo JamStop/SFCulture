@@ -35,6 +35,11 @@ PODS:
   - ParseUI (1.1.6):
     - Bolts/Tasks (~> 1.2)
     - Parse (~> 1.8)
+  - Realm (0.96.3):
+    - Realm/Headers (= 0.96.3)
+  - Realm/Headers (0.96.3)
+  - RealmSwift (0.96.3):
+    - Realm (= 0.96.3)
   - RxBlocking (2.0.0-beta.3):
     - RxSwift (~> 2.0.0-beta)
   - RxCocoa (2.0.0-beta.3):
@@ -57,6 +62,7 @@ DEPENDENCIES:
   - Parse
   - ParseFacebookUtilsV4
   - ParseUI
+  - RealmSwift
   - RxBlocking (~> 2.0.0-beta)
   - RxCocoa (~> 2.0.0-beta)
   - RxSwift (~> 2.0.0-beta)
@@ -77,6 +83,8 @@ SPEC CHECKSUMS:
   Parse: 17ad8e0677ed682f7f00503860fcda0f4eb74168
   ParseFacebookUtilsV4: cc51857cf984c6fc743e7f17c2ddebdb6f02f963
   ParseUI: 8a22e448c03f825203d8c379c80523517f68baa3
+  Realm: 145d3cdf78a03aee71bde5381ad7e542bd541720
+  RealmSwift: aab84968aad662f61f36473d1aea019f63481505
   RxBlocking: 331f8bdedf77198f8ff1a37f09c492f1f4f631e5
   RxCocoa: 1472006304b296d03c847f78b21384523cc4902e
   RxSwift: 19fbe885b404d1d36d42ac8535134739a9b42952

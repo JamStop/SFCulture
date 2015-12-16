@@ -18,6 +18,7 @@
 		BF54F9DF1C0975E9004E2DFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F9DE1C0975E9004E2DFD /* User.swift */; };
 		BFBEBF571C1C08A100CA6934 /* FirebaseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBF561C1C08A100CA6934 /* FirebaseLoginHelper.swift */; };
 		BFBEBFB21C220A9100CA6934 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFB11C220A9100CA6934 /* Realm.swift */; };
+		BFBEBFB41C2226E200CA6934 /* JSQMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFB31C2226E200CA6934 /* JSQMessage.swift */; };
 		BFF3C4011BFE6C4A0087F60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */; };
 		BFF3C4061BFE6C4A0087F60D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4041BFE6C4A0087F60D /* Login.storyboard */; };
 		BFF3C4081BFE6C4A0087F60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4071BFE6C4A0087F60D /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		BF54F9DE1C0975E9004E2DFD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BFBEBF561C1C08A100CA6934 /* FirebaseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLoginHelper.swift; sourceTree = "<group>"; };
 		BFBEBFB11C220A9100CA6934 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		BFBEBFB31C2226E200CA6934 /* JSQMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSQMessage.swift; sourceTree = "<group>"; };
 		BFF3C3FD1BFE6C4A0087F60D /* SFCulture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFCulture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF3C4051BFE6C4A0087F60D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				BFF3C4391BFFB1A40087F60D /* ErrorHandling.swift */,
 				BFBEBF561C1C08A100CA6934 /* FirebaseLoginHelper.swift */,
 				BFBEBFB11C220A9100CA6934 /* Realm.swift */,
+				BFBEBFB31C2226E200CA6934 /* JSQMessage.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				BFF3C4011BFE6C4A0087F60D /* AppDelegate.swift in Sources */,
 				BF2D9C9E1C12BC6E00A11A1A /* Constants.swift in Sources */,
 				BF2D9CAC1C162B1100A11A1A /* LoginViewController.swift in Sources */,
+				BFBEBFB41C2226E200CA6934 /* JSQMessage.swift in Sources */,
 				BFBEBFB21C220A9100CA6934 /* Realm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

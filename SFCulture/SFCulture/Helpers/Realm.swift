@@ -8,8 +8,6 @@
 
 import Foundation
 import RealmSwift
-import JSQMessagesViewController
-
 
 class User: Object {
     dynamic var uid = ""

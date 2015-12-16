@@ -25,16 +25,6 @@ PODS:
   - JSQMessagesViewController (7.2.0):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
-  - Parse (1.8.5):
-    - Bolts/Tasks (>= 1.2.2)
-  - ParseFacebookUtilsV4 (1.8.5):
-    - Bolts/Tasks (>= 1.2.2)
-    - FBSDKCoreKit (~> 4.0)
-    - FBSDKLoginKit (~> 4.0)
-    - Parse (~> 1.8.4)
-  - ParseUI (1.1.6):
-    - Bolts/Tasks (~> 1.2)
-    - Parse (~> 1.8)
   - Realm (0.96.3):
     - Realm/Headers (= 0.96.3)
   - Realm/Headers (0.96.3)
@@ -59,9 +49,6 @@ DEPENDENCIES:
   - Firebase
   - Gloss (~> 0.6)
   - JSQMessagesViewController
-  - Parse
-  - ParseFacebookUtilsV4
-  - ParseUI
   - RealmSwift
   - RxBlocking (~> 2.0.0-beta)
   - RxCocoa (~> 2.0.0-beta)
@@ -80,9 +67,6 @@ SPEC CHECKSUMS:
   Gloss: c8a57b5fb78e178a90d277aa9881fc6fa906fb82
   JSQMessagesViewController: 73cab48aa92fc2d512f3b6724f3425cc47a19eb5
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
-  Parse: 17ad8e0677ed682f7f00503860fcda0f4eb74168
-  ParseFacebookUtilsV4: cc51857cf984c6fc743e7f17c2ddebdb6f02f963
-  ParseUI: 8a22e448c03f825203d8c379c80523517f68baa3
   Realm: 145d3cdf78a03aee71bde5381ad7e542bd541720
   RealmSwift: aab84968aad662f61f36473d1aea019f63481505
   RxBlocking: 331f8bdedf77198f8ff1a37f09c492f1f4f631e5

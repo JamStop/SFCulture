@@ -7,13 +7,13 @@ PODS:
     - Bolts/Tasks
   - Bolts/Tasks (1.5.0)
   - DateTools (1.7.0)
-  - FBSDKCoreKit (4.6.0):
+  - FBSDKCoreKit (4.8.0):
     - Bolts (~> 1.1)
-    - FBSDKCoreKit/arc (= 4.6.0)
-    - FBSDKCoreKit/no-arc (= 4.6.0)
-  - FBSDKCoreKit/arc (4.6.0):
+    - FBSDKCoreKit/arc (= 4.8.0)
+    - FBSDKCoreKit/no-arc (= 4.8.0)
+  - FBSDKCoreKit/arc (4.8.0):
     - Bolts (~> 1.1)
-  - FBSDKCoreKit/no-arc (4.6.0):
+  - FBSDKCoreKit/no-arc (4.8.0):
     - Bolts (~> 1.1)
     - FBSDKCoreKit/arc
   - FBSDKLoginKit (4.8.0):
@@ -43,9 +43,9 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DateTools
-  - FBSDKCoreKit
-  - FBSDKLoginKit
-  - FBSDKShareKit
+  - FBSDKCoreKit (~> 4.8.0)
+  - FBSDKLoginKit (~> 4.8.0)
+  - FBSDKShareKit (~> 4.8.0)
   - Firebase
   - Gloss (~> 0.6)
   - JSQMessagesViewController
@@ -60,7 +60,7 @@ SPEC CHECKSUMS:
   Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
   Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
-  FBSDKCoreKit: 9954492d90c5fd65ae831395697a1660360d61f1
+  FBSDKCoreKit: 66a935d17b6e00b6b64e604f2eb9b72c9ab7deb8
   FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
   FBSDKShareKit: e7577ee3adf80fc04fb656dd133fbb522250672b
   Firebase: 48179995b561e2262c5d4060ecdffca45fbbff8b

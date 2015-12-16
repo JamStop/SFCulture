@@ -16,6 +16,8 @@ let constants = Constants.sharedInstance
 let firebase = Firebase(url: constants.API_URL)
 let facebookLogin = FBSDKLoginManager()
 
+//typealias loginHandler = (status) -> 
+
 class FirebaseLoginHelper {
 
     func login(viewController: UIViewController) {
@@ -37,7 +39,7 @@ class FirebaseLoginHelper {
                             print(authData.provider)
                             
                             
-                            self.getFBUserData()
+                            self.getFBUserData(authData.uid)
                         }
                 })
             }
@@ -45,7 +47,7 @@ class FirebaseLoginHelper {
     }
     
     
-    func getFBUserData(){
+    func getFBUserData(userID: String){
         if((FBSDKAccessToken.currentAccessToken()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){

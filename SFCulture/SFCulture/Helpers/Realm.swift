@@ -12,22 +12,32 @@ import RealmSwift
 class User: Object {
     dynamic var uid = ""
     dynamic var name = ""
-    dynamic var profilePicture: NSData?
+    dynamic var profilePicture = ""
     dynamic var culture: Culture?
     dynamic var messageGroups: [MessageGroup] = []
     
 }
 
+class currentUser: Object {
+    dynamic var user: User?
+}
+
 class Culture: Object {
     dynamic var name = ""
-    dynamic var members: [User] = []
+    dynamic var members: [User] {
+        return linkingObjects(User.self, forProperty: "messageGroups")
+    }
     
 }
 
 class MessageGroup: Object {
     dynamic var id = ""
-    dynamic var messages: [Message] = []
-    dynamic var users: [User] = []
+    dynamic var messages: [Message] {
+        return linkingObjects(Message.self, forProperty: "messageGroup")
+    }
+    dynamic var users: [User] {
+        return linkingObjects(User.self, forProperty: "")
+    }
 }
 
 class Message: Object {

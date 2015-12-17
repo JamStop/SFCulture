@@ -19,6 +19,8 @@
 		BFBEBF571C1C08A100CA6934 /* FirebaseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBF561C1C08A100CA6934 /* FirebaseLoginHelper.swift */; };
 		BFBEBFB21C220A9100CA6934 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFB11C220A9100CA6934 /* Realm.swift */; };
 		BFBEBFB41C2226E200CA6934 /* JSQMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFB31C2226E200CA6934 /* JSQMessage.swift */; };
+		BFBEBFB61C236AC000CA6934 /* CultureSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFB51C236AC000CA6934 /* CultureSelectionViewController.swift */; };
+		BFBEBFBB1C236FBC00CA6934 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFBA1C236FBC00CA6934 /* iCarousel.m */; };
 		BFF3C4011BFE6C4A0087F60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */; };
 		BFF3C4061BFE6C4A0087F60D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4041BFE6C4A0087F60D /* Login.storyboard */; };
 		BFF3C4081BFE6C4A0087F60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4071BFE6C4A0087F60D /* Assets.xcassets */; };
@@ -60,6 +62,10 @@
 		BFBEBF561C1C08A100CA6934 /* FirebaseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLoginHelper.swift; sourceTree = "<group>"; };
 		BFBEBFB11C220A9100CA6934 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		BFBEBFB31C2226E200CA6934 /* JSQMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSQMessage.swift; sourceTree = "<group>"; };
+		BFBEBFB51C236AC000CA6934 /* CultureSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureSelectionViewController.swift; sourceTree = "<group>"; };
+		BFBEBFB81C236FBC00CA6934 /* SFCulture-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFCulture-Bridging-Header.h"; path = "iCarousel/SFCulture-Bridging-Header.h"; sourceTree = "<group>"; };
+		BFBEBFB91C236FBC00CA6934 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		BFBEBFBA1C236FBC00CA6934 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		BFF3C3FD1BFE6C4A0087F60D /* SFCulture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFCulture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF3C4051BFE6C4A0087F60D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -127,6 +133,15 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		BFBEBFB71C236FAF00CA6934 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				BFBEBFB91C236FBC00CA6934 /* iCarousel.h */,
+				BFBEBFBA1C236FBC00CA6934 /* iCarousel.m */,
+			);
+			path = iCarousel;
+			sourceTree = "<group>";
+		};
 		BFF3C3F41BFE6C490087F60D = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +167,8 @@
 		BFF3C3FF1BFE6C4A0087F60D /* SFCulture */ = {
 			isa = PBXGroup;
 			children = (
+				BFBEBFB81C236FBC00CA6934 /* SFCulture-Bridging-Header.h */,
+				BFBEBFB71C236FAF00CA6934 /* iCarousel */,
 				BF2D9C9C1C12BC6400A11A1A /* Other */,
 				BF2D9C991C10D1B800A11A1A /* viewModels */,
 				BFF3C42E1BFE78B80087F60D /* Helpers */,
@@ -217,6 +234,7 @@
 			children = (
 				BF2D9C961C10CDFA00A11A1A /* OnboardViewController.swift */,
 				BF2D9CAB1C162B1100A11A1A /* LoginViewController.swift */,
+				BFBEBFB51C236AC000CA6934 /* CultureSelectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -303,7 +321,7 @@
 		BFF3C3F51BFE6C490087F60D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Augmented Humanity";
 				TargetAttributes = {
@@ -421,10 +439,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFBEBFB61C236AC000CA6934 /* CultureSelectionViewController.swift in Sources */,
 				BFBEBF571C1C08A100CA6934 /* FirebaseLoginHelper.swift in Sources */,
 				BF2D9C971C10CDFA00A11A1A /* OnboardViewController.swift in Sources */,
 				BF2D9CAA1C151F5300A11A1A /* LoginWithFacebook.swift in Sources */,
 				BF54F9DF1C0975E9004E2DFD /* UserJSON.swift in Sources */,
+				BFBEBFBB1C236FBC00CA6934 /* iCarousel.m in Sources */,
 				BFF3C43A1BFFB1A40087F60D /* ErrorHandling.swift in Sources */,
 				BF2D9CA01C12BD0400A11A1A /* JHProgressHUD.swift in Sources */,
 				BF2D9CA21C12BD3700A11A1A /* CircleProgressView.swift in Sources */,
@@ -527,6 +547,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SFCulture-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -564,6 +585,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SFCulture-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -573,10 +595,13 @@
 			baseConfigurationReference = 58F74DE16CDB4BEAB2897932 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SFCulture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AH.SFCulture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SFCulture/iCarousel/SFCulture-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -585,10 +610,12 @@
 			baseConfigurationReference = A99AA80EAC67FE7F358CB475 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SFCulture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AH.SFCulture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SFCulture/iCarousel/SFCulture-Bridging-Header.h";
 			};
 			name = Release;
 		};

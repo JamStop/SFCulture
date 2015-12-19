@@ -24,6 +24,7 @@ class currentUser: Object {
 
 class Culture: Object {
     dynamic var name = ""
+    dynamic var culturePicture = ""
     dynamic var members: [User] {
         return linkingObjects(User.self, forProperty: "messageGroups")
     }

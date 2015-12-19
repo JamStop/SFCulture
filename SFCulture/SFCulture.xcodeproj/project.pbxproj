@@ -19,8 +19,9 @@
 		BFBEBF571C1C08A100CA6934 /* FirebaseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBF561C1C08A100CA6934 /* FirebaseLoginHelper.swift */; };
 		BFBEBFB21C220A9100CA6934 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFB11C220A9100CA6934 /* Realm.swift */; };
 		BFBEBFB41C2226E200CA6934 /* JSQMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFB31C2226E200CA6934 /* JSQMessage.swift */; };
-		BFBEBFB61C236AC000CA6934 /* CultureSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFB51C236AC000CA6934 /* CultureSelectionViewController.swift */; };
 		BFBEBFBB1C236FBC00CA6934 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFBA1C236FBC00CA6934 /* iCarousel.m */; };
+		BFBEBFBD1C2371F200CA6934 /* CultureSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFBC1C2371F200CA6934 /* CultureSelectionViewController.swift */; };
+		BFBEBFBF1C23C05100CA6934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFBEBFBE1C23C05100CA6934 /* Main.storyboard */; };
 		BFF3C4011BFE6C4A0087F60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */; };
 		BFF3C4061BFE6C4A0087F60D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4041BFE6C4A0087F60D /* Login.storyboard */; };
 		BFF3C4081BFE6C4A0087F60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4071BFE6C4A0087F60D /* Assets.xcassets */; };
@@ -62,10 +63,11 @@
 		BFBEBF561C1C08A100CA6934 /* FirebaseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLoginHelper.swift; sourceTree = "<group>"; };
 		BFBEBFB11C220A9100CA6934 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		BFBEBFB31C2226E200CA6934 /* JSQMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSQMessage.swift; sourceTree = "<group>"; };
-		BFBEBFB51C236AC000CA6934 /* CultureSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureSelectionViewController.swift; sourceTree = "<group>"; };
 		BFBEBFB81C236FBC00CA6934 /* SFCulture-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFCulture-Bridging-Header.h"; path = "iCarousel/SFCulture-Bridging-Header.h"; sourceTree = "<group>"; };
 		BFBEBFB91C236FBC00CA6934 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		BFBEBFBA1C236FBC00CA6934 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		BFBEBFBC1C2371F200CA6934 /* CultureSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureSelectionViewController.swift; sourceTree = "<group>"; };
+		BFBEBFBE1C23C05100CA6934 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BFF3C3FD1BFE6C4A0087F60D /* SFCulture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFCulture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF3C4051BFE6C4A0087F60D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -234,7 +236,7 @@
 			children = (
 				BF2D9C961C10CDFA00A11A1A /* OnboardViewController.swift */,
 				BF2D9CAB1C162B1100A11A1A /* LoginViewController.swift */,
-				BFBEBFB51C236AC000CA6934 /* CultureSelectionViewController.swift */,
+				BFBEBFBC1C2371F200CA6934 /* CultureSelectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -244,6 +246,7 @@
 			children = (
 				BF2D9CA71C151E1000A11A1A /* LoginWithFacebook.xib */,
 				BF2D9CA91C151F5300A11A1A /* LoginWithFacebook.swift */,
+				BFBEBFBE1C23C05100CA6934 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF2D9CA81C151E1000A11A1A /* LoginWithFacebook.xib in Resources */,
+				BFBEBFBF1C23C05100CA6934 /* Main.storyboard in Resources */,
 				BFF3C40B1BFE6C4A0087F60D /* LaunchScreen.storyboard in Resources */,
 				BFF3C4081BFE6C4A0087F60D /* Assets.xcassets in Resources */,
 				BFF3C4061BFE6C4A0087F60D /* Login.storyboard in Resources */,
@@ -439,9 +443,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFBEBFB61C236AC000CA6934 /* CultureSelectionViewController.swift in Sources */,
 				BFBEBF571C1C08A100CA6934 /* FirebaseLoginHelper.swift in Sources */,
 				BF2D9C971C10CDFA00A11A1A /* OnboardViewController.swift in Sources */,
+				BFBEBFBD1C2371F200CA6934 /* CultureSelectionViewController.swift in Sources */,
 				BF2D9CAA1C151F5300A11A1A /* LoginWithFacebook.swift in Sources */,
 				BF54F9DF1C0975E9004E2DFD /* UserJSON.swift in Sources */,
 				BFBEBFBB1C236FBC00CA6934 /* iCarousel.m in Sources */,

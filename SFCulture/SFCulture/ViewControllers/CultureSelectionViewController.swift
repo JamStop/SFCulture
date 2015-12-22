@@ -8,6 +8,8 @@
 
 import UIKit
 
+let screenWidth = UIScreen.mainScreen().applicationFrame.size.width
+
 class CultureSelectionViewController: UIViewController {
     
     
@@ -33,11 +35,11 @@ extension CultureSelectionViewController: iCarouselDataSource {
     }
     
     func carousel(carousel: iCarousel!, viewForItemAtIndex index: Int, reusingView view: UIView!) -> UIView! {
-        return
+        return CultureFlagView(frame: CGRect(x: 0, y: 0, width: screenWidth * 0.6, height: screenWidth * 0.3))
     }
     
     func carousel(carousel: iCarousel!, placeholderViewAtIndex index: Int, reusingView view: UIView!) -> UIView! {
-        return
+        return CultureFlagView(frame: CGRect(x: 0, y: 0, width: screenWidth * 0.6, height: screenWidth * 0.3))
     }
     
 }

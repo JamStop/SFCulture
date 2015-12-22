@@ -22,6 +22,8 @@
 		BFBEBFBB1C236FBC00CA6934 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFBA1C236FBC00CA6934 /* iCarousel.m */; };
 		BFBEBFBD1C2371F200CA6934 /* CultureSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFBC1C2371F200CA6934 /* CultureSelectionViewController.swift */; };
 		BFBEBFBF1C23C05100CA6934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFBEBFBE1C23C05100CA6934 /* Main.storyboard */; };
+		BFBEBFC11C28D67400CA6934 /* CultureFlagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFBEBFC01C28D67400CA6934 /* CultureFlagView.xib */; };
+		BFBEBFC51C28D6C200CA6934 /* CultureFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFC41C28D6C200CA6934 /* CultureFlagView.swift */; };
 		BFF3C4011BFE6C4A0087F60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */; };
 		BFF3C4061BFE6C4A0087F60D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4041BFE6C4A0087F60D /* Login.storyboard */; };
 		BFF3C4081BFE6C4A0087F60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4071BFE6C4A0087F60D /* Assets.xcassets */; };
@@ -67,7 +69,9 @@
 		BFBEBFB91C236FBC00CA6934 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		BFBEBFBA1C236FBC00CA6934 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		BFBEBFBC1C2371F200CA6934 /* CultureSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureSelectionViewController.swift; sourceTree = "<group>"; };
-		BFBEBFBE1C23C05100CA6934 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BFBEBFBE1C23C05100CA6934 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Main.storyboard; sourceTree = "<group>"; };
+		BFBEBFC01C28D67400CA6934 /* CultureFlagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CultureFlagView.xib; sourceTree = "<group>"; };
+		BFBEBFC41C28D6C200CA6934 /* CultureFlagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureFlagView.swift; sourceTree = "<group>"; };
 		BFF3C3FD1BFE6C4A0087F60D /* SFCulture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFCulture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF3C4051BFE6C4A0087F60D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 				BFF3C4321BFE78B80087F60D /* ViewControllers */,
 				BFF3C4331BFE78B80087F60D /* Views */,
 				BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */,
+				BFBEBFBE1C23C05100CA6934 /* Main.storyboard */,
 				BFF3C4041BFE6C4A0087F60D /* Login.storyboard */,
 				BFF3C4071BFE6C4A0087F60D /* Assets.xcassets */,
 				BFF3C4091BFE6C4A0087F60D /* LaunchScreen.storyboard */,
@@ -246,7 +251,8 @@
 			children = (
 				BF2D9CA71C151E1000A11A1A /* LoginWithFacebook.xib */,
 				BF2D9CA91C151F5300A11A1A /* LoginWithFacebook.swift */,
-				BFBEBFBE1C23C05100CA6934 /* Main.storyboard */,
+				BFBEBFC01C28D67400CA6934 /* CultureFlagView.xib */,
+				BFBEBFC41C28D6C200CA6934 /* CultureFlagView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF2D9CA81C151E1000A11A1A /* LoginWithFacebook.xib in Resources */,
+				BFBEBFC11C28D67400CA6934 /* CultureFlagView.xib in Resources */,
 				BFBEBFBF1C23C05100CA6934 /* Main.storyboard in Resources */,
 				BFF3C40B1BFE6C4A0087F60D /* LaunchScreen.storyboard in Resources */,
 				BFF3C4081BFE6C4A0087F60D /* Assets.xcassets in Resources */,
@@ -444,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFBEBF571C1C08A100CA6934 /* FirebaseLoginHelper.swift in Sources */,
+				BFBEBFC51C28D6C200CA6934 /* CultureFlagView.swift in Sources */,
 				BF2D9C971C10CDFA00A11A1A /* OnboardViewController.swift in Sources */,
 				BFBEBFBD1C2371F200CA6934 /* CultureSelectionViewController.swift in Sources */,
 				BF2D9CAA1C151F5300A11A1A /* LoginWithFacebook.swift in Sources */,

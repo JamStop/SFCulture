@@ -115,7 +115,7 @@
         <!--Landing-->
         <scene sceneID="PLa-YC-6q0">
             <objects>
-                <viewController storyboardIdentifier="Landing1" title="Landing" id="YC4-0H-d6l" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Landing1" title="Landing" id="YC4-0H-d6l" customClass="OnboardBGViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hCg-GX-PHY"/>
                         <viewControllerLayoutGuide type="bottom" id="OLG-vf-HxU"/>

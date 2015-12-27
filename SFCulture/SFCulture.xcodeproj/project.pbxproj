@@ -24,6 +24,7 @@
 		BFBEBFBF1C23C05100CA6934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFBEBFBE1C23C05100CA6934 /* Main.storyboard */; };
 		BFBEBFC11C28D67400CA6934 /* CultureFlagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFBEBFC01C28D67400CA6934 /* CultureFlagView.xib */; };
 		BFBEBFC51C28D6C200CA6934 /* CultureFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFC41C28D6C200CA6934 /* CultureFlagView.swift */; };
+		BFBEBFC71C2A8BC500CA6934 /* OnboardBGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFC61C2A8BC500CA6934 /* OnboardBGViewController.swift */; };
 		BFF3C4011BFE6C4A0087F60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */; };
 		BFF3C4061BFE6C4A0087F60D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4041BFE6C4A0087F60D /* Login.storyboard */; };
 		BFF3C4081BFE6C4A0087F60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4071BFE6C4A0087F60D /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		BFBEBFBE1C23C05100CA6934 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Main.storyboard; sourceTree = "<group>"; };
 		BFBEBFC01C28D67400CA6934 /* CultureFlagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CultureFlagView.xib; sourceTree = "<group>"; };
 		BFBEBFC41C28D6C200CA6934 /* CultureFlagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureFlagView.swift; sourceTree = "<group>"; };
+		BFBEBFC61C2A8BC500CA6934 /* OnboardBGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardBGViewController.swift; sourceTree = "<group>"; };
 		BFF3C3FD1BFE6C4A0087F60D /* SFCulture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFCulture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF3C4051BFE6C4A0087F60D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				BF2D9C961C10CDFA00A11A1A /* OnboardViewController.swift */,
 				BF2D9CAB1C162B1100A11A1A /* LoginViewController.swift */,
 				BFBEBFBC1C2371F200CA6934 /* CultureSelectionViewController.swift */,
+				BFBEBFC61C2A8BC500CA6934 /* OnboardBGViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				BF2D9C971C10CDFA00A11A1A /* OnboardViewController.swift in Sources */,
 				BFBEBFBD1C2371F200CA6934 /* CultureSelectionViewController.swift in Sources */,
 				BF2D9CAA1C151F5300A11A1A /* LoginWithFacebook.swift in Sources */,
+				BFBEBFC71C2A8BC500CA6934 /* OnboardBGViewController.swift in Sources */,
 				BF54F9DF1C0975E9004E2DFD /* UserJSON.swift in Sources */,
 				BFBEBFBB1C236FBC00CA6934 /* iCarousel.m in Sources */,
 				BFF3C43A1BFFB1A40087F60D /* ErrorHandling.swift in Sources */,

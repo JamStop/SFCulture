@@ -8,7 +8,8 @@
 
 import UIKit
 
-let screenWidth = UIScreen.mainScreen().applicationFrame.size.width
+let screenWidth = UIScreen.mainScreen().bounds.size.width
+
 
 class CultureSelectionViewController: UIViewController {
     

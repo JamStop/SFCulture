@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="367" height="173"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mu9-Qz-Z0j">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landing1" translatesAutoresizingMaskIntoConstraints="NO" id="mu9-Qz-Z0j">
                     <rect key="frame" x="0.0" y="0.0" width="367" height="173"/>
                 </imageView>
             </subviews>
@@ -31,4 +31,7 @@
             <point key="canvasLocation" x="128.5" y="115.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Landing1" width="375" height="667"/>
+    </resources>
 </document>

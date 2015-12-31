@@ -10,14 +10,16 @@ import UIKit
 
 let screenWidth = UIScreen.mainScreen().bounds.size.width
 
-
 class CultureSelectionViewController: UIViewController {
     
+    @IBOutlet weak var carousel: iCarousel!
     
-    
-    
-    
-    
+    override func viewDidLoad() {
+        carousel.delegate = self
+        carousel.dataSource = self
+        
+        carousel.type = iCarouselType.Rotary
+    }
 
 }
 
@@ -32,7 +34,7 @@ extension CultureSelectionViewController: iCarouselDelegate {
 extension CultureSelectionViewController: iCarouselDataSource {
     
     func numberOfItemsInCarousel(carousel: iCarousel!) -> Int {
-        return 1
+        return 2
     }
     
     func carousel(carousel: iCarousel!, viewForItemAtIndex index: Int, reusingView view: UIView!) -> UIView! {

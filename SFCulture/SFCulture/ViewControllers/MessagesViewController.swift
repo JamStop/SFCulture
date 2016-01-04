@@ -8,12 +8,27 @@
 
 import UIKit
 import JSQMessagesViewController
+import Firebase
 
 class MessagesViewController: JSQMessagesViewController {
+    
+    let messagesImageFactory = JSQMessagesBubbleImageFactory()
+    
+    var messages = [JSQMessage]()
+    var outgoingBubbleImageView: JSQMessagesBubbleImage!
+    var incomingBubbleImageView: JSQMessagesBubbleImage!
+    
+    var senderImageUrl: String!
+    var batchMessages = true
+    
+    var ref: Firebase!
+    var messagesRef: Firebase!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        outgoingBubbleImageView = messagesImageFactory.outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleLightGrayColor())
+        incomingBubbleImageView = messagesImageFactory.incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleGreenColor())
         
     }
 

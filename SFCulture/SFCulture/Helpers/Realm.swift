@@ -12,7 +12,7 @@ import RealmSwift
 class User: Object {
     dynamic var uid = ""
     dynamic var name = ""
-    dynamic var profilePicture = ""
+    dynamic var profilePicture: NSData?
     dynamic var culture: Culture?
     dynamic var messageGroups: [MessageGroup] = []
     
@@ -24,7 +24,7 @@ class currentUser: Object {
 
 class Culture: Object {
     dynamic var name = ""
-    dynamic var culturePicture = ""
+    dynamic var culturePicture: NSData?
     dynamic var members: [User] {
         return linkingObjects(User.self, forProperty: "messageGroups")
     }

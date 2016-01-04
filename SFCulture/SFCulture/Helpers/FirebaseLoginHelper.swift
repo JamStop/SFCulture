@@ -11,9 +11,8 @@ import RxSwift
 import Firebase
 import FBSDKLoginKit
 
-let constants = Constants.sharedInstance
 
-let ref = Firebase(url: constants.API_URL)
+var ref: Firebase!
 let facebookLogin = FBSDKLoginManager()
 
 //typealias loginHandler = (status) -> 
@@ -21,6 +20,8 @@ let facebookLogin = FBSDKLoginManager()
 class FirebaseLoginHelper {
 
     func login(viewController: UIViewController) {
+        ref = Firebase(url: "https://sfculture.firebaseio.com/")
+        
         facebookLogin.logInWithReadPermissions(["public_profile", "user_friends", "email"], fromViewController: viewController, handler: {
             (facebookResult, facebookError) -> Void in
             if facebookError != nil {

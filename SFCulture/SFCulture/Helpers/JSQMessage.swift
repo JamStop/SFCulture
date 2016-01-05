@@ -17,16 +17,16 @@ class JSQMessage : NSObject, JSQMessageData {
     var isMediaMessage_ : Bool
     var messageHash_ : UInt = 0
     var text_ : String
-    var image_ : String
+//    var image_ : String
     
-    init(senderId: String, senderDisplayName: String?, date: NSDate, text: String, image: String) {
+    init(senderId: String, senderDisplayName: String?, date: NSDate, text: String) {
         self.senderId_ = senderId
         self.senderDisplayName_ = senderDisplayName
         self.date_ = date
         self.isMediaMessage_ = false
 //        self.messageHash_ = messageHash
         self.text_ = text
-        self.image_ = image
+//        self.image_ = image
     }
     
     func senderId() -> String! {
@@ -53,7 +53,7 @@ class JSQMessage : NSObject, JSQMessageData {
         return text_;
     }
     
-    func image() -> NSData! {
-        return NSData(base64EncodedString: image_, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
-    }
+//    func image() -> NSData! {
+//        return NSData(base64EncodedString: image_, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
+//    }
 }

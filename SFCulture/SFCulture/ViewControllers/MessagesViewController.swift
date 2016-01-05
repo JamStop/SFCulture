@@ -43,9 +43,8 @@ class MessagesViewController: JSQMessagesViewController {
             let senderDisplayName = snapshot.valueForKey("senderDisplayName") as! String
             let date = snapshot.valueForKey("date") as! NSDate // Need to convert this later
             let text = snapshot.valueForKey("text") as! String
-            let image = snapshot.valueForKey("image") as! String
             
-            let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text, image: image)
+            let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
             self.messages.append(message)
             self.finishReceivingMessage()
             
@@ -53,19 +52,22 @@ class MessagesViewController: JSQMessagesViewController {
         })
     }
     
-    func sendMessage(senderId: String, senderDisplayName: String, date: String, text: String, image: String) {
+    func sendMessage(senderId: String, senderDisplayName: String, date: String, text: String) {
         messagesRef.childByAutoId().setValue([
             "senderId": senderId,
             "senderDisplayName": senderDisplayName,
             "date": date,
-            "text": text,
-            "image": image
+            "text": text
             ])
     }
     
-    func sendMessageUIPlaceholder(senderId: String, senderDisplayName: String, date: NSDate, text: String, image: UIImage) {
-        let tempMessage = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text, image: image)
+    func sendMessageUIPlaceholder(senderId: String, senderDisplayName: String, date: NSDate, text: String) {
+        let tempMessage = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
+        message.append(tempMessage)
+        
     }
+    
+    
 
 
 }

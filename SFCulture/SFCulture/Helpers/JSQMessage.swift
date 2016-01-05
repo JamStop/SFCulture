@@ -19,12 +19,12 @@ class JSQMessage : NSObject, JSQMessageData {
     var text_ : String
     var image_ : String
     
-    init(senderId: String, senderDisplayName: String?, isMediaMessage: Bool, messageHash: UInt, text: String, image: String) {
+    init(senderId: String, senderDisplayName: String?, date: NSDate, text: String, image: String) {
         self.senderId_ = senderId
         self.senderDisplayName_ = senderDisplayName
-        self.date_ = NSDate()
-        self.isMediaMessage_ = isMediaMessage
-        self.messageHash_ = messageHash
+        self.date_ = date
+        self.isMediaMessage_ = false
+//        self.messageHash_ = messageHash
         self.text_ = text
         self.image_ = image
     }

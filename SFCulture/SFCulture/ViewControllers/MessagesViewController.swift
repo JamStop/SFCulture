@@ -18,8 +18,8 @@ class MessagesViewController: JSQMessagesViewController {
     
     var messages = [JSQMessage]()
     var avatars = Dictionary<String, JSQMessagesAvatarImage>()
-    var outgoingBubbleImageView: JSQMessagesBubbleImage!
-    var incomingBubbleImageView: JSQMessagesBubbleImage!
+    var outgoingBubbleImage: JSQMessagesBubbleImage!
+    var incomingBubbleImage: JSQMessagesBubbleImage!
     
     var senderImageUrl: String!
     var batchMessages = true
@@ -37,8 +37,8 @@ class MessagesViewController: JSQMessagesViewController {
         
         messagesRef = Firebase(url: "https://sfculture.firebaseio.com/messageGroups/" + currentMessageGroupId)
 
-        outgoingBubbleImageView = messagesImageFactory.outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleLightGrayColor())
-        incomingBubbleImageView = messagesImageFactory.incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleGreenColor())
+        outgoingBubbleImage = messagesImageFactory.outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleLightGrayColor())
+        incomingBubbleImage = messagesImageFactory.incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleGreenColor())
         
         inputToolbar!.contentView!.leftBarButtonItem = nil
         automaticallyScrollsToMostRecentMessage = true
@@ -134,10 +134,35 @@ class MessagesViewController: JSQMessagesViewController {
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         
-        sendMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: nil, text: text)
+        sendMessage(senderId, senderDisplayName: senderDisplayName, date: getCurrentDateAsString(), text: text)
         
         finishSendingMessage()
     }
-
+    
+    func getCurrentDateAsString() -> String {
+        let formatter = NSDateFormatter()
+        formatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        return formatter.stringFromDate(NSDate())
+    }
+    
+    override func didPressAccessoryButton(sender: UIButton!) {
+        print("Camera pressed!")
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
+        return messages[indexPath.item]
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageBubbleImageDataSource! {
+        let message = messages[indexPath.item]
+        if message.senderId() == user.uid {
+            return outgoingBubbleImage
+        }
+        return incomingBubbleImage
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
+        let message = messages[indexPath.item]
+    }
 
 }

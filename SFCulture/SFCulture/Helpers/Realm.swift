@@ -22,6 +22,10 @@ class currentUser: Object {
     dynamic var user: User?
 }
 
+class currentMessageGroup: Object {
+    dynamic var messageGroup: MessageGroup?
+}
+
 class Culture: Object {
     dynamic var name = ""
     dynamic var culturePicture: NSData?

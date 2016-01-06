@@ -27,6 +27,8 @@
 		BFBEC0141C3A10CB00CA6934 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEC0131C3A10CB00CA6934 /* MainTabBarController.swift */; };
 		BFBEC0161C3A115E00CA6934 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEC0151C3A115E00CA6934 /* MessagesViewController.swift */; };
 		BFBEC0181C3AF4CF00CA6934 /* FirebaseMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEC0171C3AF4CF00CA6934 /* FirebaseMessageHelper.swift */; };
+		BFBEC01A1C3D9BCB00CA6934 /* CultureSearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEC0191C3D9BCB00CA6934 /* CultureSearchResultViewModel.swift */; };
+		BFBEC01C1C3D9CB300CA6934 /* Cultures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEC01B1C3D9CB300CA6934 /* Cultures.swift */; };
 		BFF3C4011BFE6C4A0087F60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */; };
 		BFF3C4061BFE6C4A0087F60D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4041BFE6C4A0087F60D /* Login.storyboard */; };
 		BFF3C4081BFE6C4A0087F60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF3C4071BFE6C4A0087F60D /* Assets.xcassets */; };
@@ -78,6 +80,8 @@
 		BFBEC0131C3A10CB00CA6934 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		BFBEC0151C3A115E00CA6934 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		BFBEC0171C3AF4CF00CA6934 /* FirebaseMessageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseMessageHelper.swift; sourceTree = "<group>"; };
+		BFBEC0191C3D9BCB00CA6934 /* CultureSearchResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureSearchResultViewModel.swift; sourceTree = "<group>"; };
+		BFBEC01B1C3D9CB300CA6934 /* Cultures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cultures.swift; sourceTree = "<group>"; };
 		BFF3C3FD1BFE6C4A0087F60D /* SFCulture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFCulture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3C4001BFE6C4A0087F60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF3C4051BFE6C4A0087F60D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		BF2D9C991C10D1B800A11A1A /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
+				BFBEC0191C3D9BCB00CA6934 /* CultureSearchResultViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				BFBEBFB11C220A9100CA6934 /* Realm.swift */,
 				BFBEBFB31C2226E200CA6934 /* JSQMessage.swift */,
 				BFBEC0171C3AF4CF00CA6934 /* FirebaseMessageHelper.swift */,
+				BFBEC01B1C3D9CB300CA6934 /* Cultures.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 				BFBEBFC51C28D6C200CA6934 /* CultureFlagView.swift in Sources */,
 				BF2D9C971C10CDFA00A11A1A /* OnboardViewController.swift in Sources */,
 				BFBEBFBD1C2371F200CA6934 /* CultureSelectionViewController.swift in Sources */,
+				BFBEC01A1C3D9BCB00CA6934 /* CultureSearchResultViewModel.swift in Sources */,
 				BF2D9CAA1C151F5300A11A1A /* LoginWithFacebook.swift in Sources */,
 				BFBEBFC71C2A8BC500CA6934 /* OnboardBGViewController.swift in Sources */,
 				BF54F9DF1C0975E9004E2DFD /* UserJSON.swift in Sources */,
@@ -470,6 +477,7 @@
 				BFF3C43A1BFFB1A40087F60D /* ErrorHandling.swift in Sources */,
 				BF2D9CA01C12BD0400A11A1A /* JHProgressHUD.swift in Sources */,
 				BF2D9CA21C12BD3700A11A1A /* CircleProgressView.swift in Sources */,
+				BFBEC01C1C3D9CB300CA6934 /* Cultures.swift in Sources */,
 				BFF3C4011BFE6C4A0087F60D /* AppDelegate.swift in Sources */,
 				BFBEC0161C3A115E00CA6934 /* MessagesViewController.swift in Sources */,
 				BF2D9CAC1C162B1100A11A1A /* LoginViewController.swift in Sources */,

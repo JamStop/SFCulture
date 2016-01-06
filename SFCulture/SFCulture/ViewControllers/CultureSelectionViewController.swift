@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import RxSwift
 
 let screenWidth = UIScreen.mainScreen().bounds.size.width
 
 class CultureSelectionViewController: UIViewController {
+    
+    private var disposeBag = DisposeBag()
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var carousel: iCarousel!
     
@@ -34,15 +39,15 @@ extension CultureSelectionViewController: iCarouselDelegate {
 extension CultureSelectionViewController: iCarouselDataSource {
     
     func numberOfItemsInCarousel(carousel: iCarousel!) -> Int {
-        return 4
+        return Cultures.sharedInstance.cultures.count
     }
     
     func carousel(carousel: iCarousel!, viewForItemAtIndex index: Int, reusingView view: UIView!) -> UIView! {
-        return CultureFlagView(frame: CGRect(x: 0, y: 0, width: screenWidth * 0.8, height: screenWidth * 0.5))
+        return CultureFlagView(frame: CGRect(x: 0, y: 0, width: screenWidth * 0.8, height: screenWidth * 0.53), culture: Cultures.sharedInstance.cultures[index], index: index)
     }
     
     func carousel(carousel: iCarousel!, placeholderViewAtIndex index: Int, reusingView view: UIView!) -> UIView! {
-        return CultureFlagView(frame: CGRect(x: 0, y: 0, width: screenWidth * 0.8, height: screenWidth * 0.5))
+        return CultureFlagView(frame: CGRect(x: 0, y: 0, width: screenWidth * 0.8, height: screenWidth * 0.53), culture: Cultures.sharedInstance.cultures[index], index: index)
     }
     
 }

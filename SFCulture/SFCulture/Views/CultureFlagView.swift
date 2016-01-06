@@ -11,6 +11,8 @@ import UIKit
 class CultureFlagView: UIView {
     
     var view: UIView!
+    var culture: String!
+    var index: Int!
     
     @IBOutlet weak var flagImageView: UIImageView!
     
@@ -36,10 +38,14 @@ class CultureFlagView: UIView {
         return view
     }
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, culture: String, index: Int) {
         super.init(frame: frame)
         
         xibSetup()
+        
+        self.culture = culture
+        self.index = index
+        flagImageView.image = UIImage(named: culture)
     }
 
 

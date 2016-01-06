@@ -21,11 +21,23 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <searchBar contentMode="redraw" placeholder="Find Culture" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-m6-MMz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="1" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6cU-gC-6Eg" firstAttribute="top" secondItem="rnQ-rk-d13" secondAttribute="bottom" id="6to-aG-9tE"/>
+                            <constraint firstItem="ahd-m6-MMz" firstAttribute="top" secondItem="rnQ-rk-d13" secondAttribute="bottom" id="C8K-lh-2mK"/>
                             <constraint firstAttribute="trailing" secondItem="6cU-gC-6Eg" secondAttribute="trailing" id="TIb-cz-vHF"/>
+                            <constraint firstItem="ahd-m6-MMz" firstAttribute="leading" secondItem="2or-fB-hu7" secondAttribute="leading" id="iGn-QO-aaX"/>
+                            <constraint firstAttribute="trailing" secondItem="ahd-m6-MMz" secondAttribute="trailing" id="p7k-Nr-Ejv"/>
                             <constraint firstItem="6cU-gC-6Eg" firstAttribute="leading" secondItem="2or-fB-hu7" secondAttribute="leading" id="tA0-Qv-UJP"/>
                             <constraint firstItem="edf-x3-SA3" firstAttribute="top" secondItem="6cU-gC-6Eg" secondAttribute="bottom" id="uOi-GE-Lej"/>
                         </constraints>
@@ -33,6 +45,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="carousel" destination="6cU-gC-6Eg" id="hTI-IR-n1r"/>
+                        <outlet property="searchBar" destination="ahd-m6-MMz" id="Snn-cI-Iee"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xg-CO-bLY" userLabel="First Responder" sceneMemberID="firstResponder"/>

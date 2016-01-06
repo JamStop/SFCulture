@@ -28,7 +28,6 @@ class OnboardPageViewController: UIPageViewController {
     
     func getFirstLandingViewController() -> UIViewController {
         return storyboard!.instantiateViewControllerWithIdentifier("Landing1")
-
     }
     
     func showLoadingIndicator(title: String, view: UIView){
@@ -37,6 +36,10 @@ class OnboardPageViewController: UIPageViewController {
     
     func hideLoadingIndicator(){
         JHProgressHUD.sharedHUD.hide()
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 
 }

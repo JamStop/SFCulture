@@ -36,6 +36,10 @@ class LoginViewController: UIViewController {
         print("pressed")
         loginHelper.login(self)
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
 
 }

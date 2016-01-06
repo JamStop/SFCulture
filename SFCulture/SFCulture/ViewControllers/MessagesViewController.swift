@@ -161,8 +161,8 @@ class MessagesViewController: JSQMessagesViewController {
         return incomingBubbleImage
     }
     
-    override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
-        let message = messages[indexPath.item]
-    }
+//    override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
+//        let message = messages[indexPath.item]
+//    }
 
 }

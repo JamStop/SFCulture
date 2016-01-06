@@ -20,10 +20,26 @@ class CultureSelectionViewController: UIViewController {
     @IBOutlet weak var carousel: iCarousel!
     
     override func viewDidLoad() {
+        self.view.userInteractionEnabled = true
+        searchBar.autocapitalizationType = UITextAutocapitalizationType.None
+        
         carousel.delegate = self
         carousel.dataSource = self
         
         carousel.type = iCarouselType.Rotary
+        
+        setupTouchEvents()
+
+    }
+    
+    func setupTouchEvents() {
+        let dismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard:")
+        self.view.addGestureRecognizer(dismiss)
+    }
+    
+    func dismissKeyboard(gestureRecognizer: UIGestureRecognizer) {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
 }
@@ -53,5 +69,7 @@ extension CultureSelectionViewController: iCarouselDataSource {
 }
 
 extension CultureSelectionViewController: UISearchBarDelegate {
-    
+    func carouselDidScroll(carousel: iCarousel!) {
+        return
+    }
 }

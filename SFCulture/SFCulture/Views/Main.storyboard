@@ -24,7 +24,7 @@
                             <searchBar contentMode="redraw" placeholder="Find Culture" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-m6-MMz">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" red="1" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
                                     <string>Title</string>

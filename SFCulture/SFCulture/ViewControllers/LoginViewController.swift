@@ -40,6 +40,14 @@ class LoginViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    func showLoadingIndicator(title: String, view: UIView){
+        JHProgressHUD.sharedHUD.showInView(view, withHeader: "", andFooter: title)
+    }
+    
+    func hideLoadingIndicator(){
+        JHProgressHUD.sharedHUD.hide()
+    }
 
 
 }

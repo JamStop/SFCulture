@@ -15,8 +15,8 @@
             <rect key="frame" x="0.0" y="0.0" width="367" height="164"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Japan" translatesAutoresizingMaskIntoConstraints="NO" id="mu9-Qz-Z0j">
-                    <rect key="frame" x="0.0" y="0.0" width="367" height="173"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Japan" translatesAutoresizingMaskIntoConstraints="NO" id="mu9-Qz-Z0j">
+                    <rect key="frame" x="0.0" y="0.0" width="367" height="164"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -10,14 +10,16 @@ import Foundation
 import RxSwift
 import Firebase
 import FBSDKLoginKit
+import RealmSwift
+import SDWebImage
 
 
 var ref: Firebase!
 let facebookLogin = FBSDKLoginManager()
 
-//typealias loginHandler = (status) -> 
-
 class FirebaseLoginHelper {
+    
+    let realm = try! Realm()
 
     func login(viewController: UIViewController) {
         ref = Firebase(url: "https://sfculture.firebaseio.com/")
@@ -35,10 +37,10 @@ class FirebaseLoginHelper {
                     withCompletionBlock: { error, authData in
                         if error != nil {
                             print("Login failed. \(error)")
+                            return
                         } else {
                             print("Logged in! \(authData)")
                             print(authData.provider)
-                            
                             
                             self.getFBUserData()
                         }
@@ -48,7 +50,7 @@ class FirebaseLoginHelper {
     }
     
     
-    func getFBUserData(){
+    func getFBUserData() {
         if((FBSDKAccessToken.currentAccessToken()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
@@ -75,6 +77,30 @@ class FirebaseLoginHelper {
                     ref.childByAppendingPath("users").childByAppendingPath(uid).setValue(userInfo)
                     
                     print(userData)
+                    
+                    SDWebImageDownloader().downloadImageWithURL(NSURL(fileURLWithPath: pictureURL!), options: SDWebImageDownloaderOptions.HighPriority, progress: nil, completed: { (image, data, error, bool) in
+                        if error == nil {
+                            let newUser = User(value: [
+                                "uid": uid,
+                                "name": userData["name"]!,
+                                "profilePicture": image
+                            ])
+                            
+                            let newCurrentUser = CurrentUser(value: [newUser])
+                            
+                            try! self.realm.write {
+                                self.realm.add(newCurrentUser, update: true)
+                            }
+                        }
+                        
+                        
+                    })
+//                    let newUser = User(value: [
+//                        "uid": uid,
+//                        "name": userData["name"]!,
+//                        "profilePicture":
+                    
+                    
                     
                 }
             })

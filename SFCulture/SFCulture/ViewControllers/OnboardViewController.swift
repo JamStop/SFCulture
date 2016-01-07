@@ -19,9 +19,7 @@ class OnboardPageViewController: UIPageViewController {
         dataSource = self
         delegate = self
         
-        setViewControllers([getFirstLandingViewController()], direction: .Forward, animated: false, completion: nil)
-        
-//        showLoadingIndicator("Checking Facebook details...", view: self.view)
+        setViewControllers([getSecondLandingViewController()], direction: .Forward, animated: false, completion: nil)
         
         
     }
@@ -30,12 +28,12 @@ class OnboardPageViewController: UIPageViewController {
         return storyboard!.instantiateViewControllerWithIdentifier("Landing1")
     }
     
-    func showLoadingIndicator(title: String, view: UIView){
-        JHProgressHUD.sharedHUD.showInView(view, withHeader: "", andFooter: title)
+    func getSecondLandingViewController() -> UIViewController {
+        return storyboard!.instantiateViewControllerWithIdentifier("Landing2")
     }
     
-    func hideLoadingIndicator(){
-        JHProgressHUD.sharedHUD.hide()
+    func getThirdLandingViewController() -> UIViewController {
+        return storyboard!.instantiateViewControllerWithIdentifier("Landing3")
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -49,10 +47,22 @@ class OnboardPageViewController: UIPageViewController {
 extension OnboardPageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        if viewController.restorationIdentifier == "Landing1" {
+            return getSecondLandingViewController()
+        }
+        else if viewController.restorationIdentifier == "Landing2" {
+            return getThirdLandingViewController()
+        }
         return getFirstLandingViewController()
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        if viewController.restorationIdentifier == "Landing3" {
+            return getSecondLandingViewController()
+        }
+        else if viewController.restorationIdentifier == "Landing1" {
+            return getThirdLandingViewController()
+        }
         return getFirstLandingViewController()
     }
     

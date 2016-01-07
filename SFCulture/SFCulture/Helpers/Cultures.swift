@@ -14,5 +14,5 @@ class Cultures: NSObject {
     //Singleton Class
     static let sharedInstance = Cultures()
     
-    let cultures = ["Japan", "Germany", "France"]
+    let cultures = ["MakeSchool", "Egypt", "China", "Japan", "Germany", "France"]
 }

@@ -19,6 +19,10 @@ class CultureSelectionViewController: UIViewController {
     
     @IBOutlet weak var carousel: iCarousel!
     
+    @IBOutlet weak var cultureName: UILabel!
+    
+    var searching = false
+    
     override func viewDidLoad() {
         self.view.userInteractionEnabled = true
         searchBar.autocapitalizationType = UITextAutocapitalizationType.None
@@ -28,27 +32,115 @@ class CultureSelectionViewController: UIViewController {
         
         carousel.type = iCarouselType.Rotary
         
-        setupTouchEvents()
+        cultureName.text = "MakeSchool"
+        
+//        setupTouchEvents()
+        
+        configureSearchBar()
 
     }
     
-    func setupTouchEvents() {
-        let dismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard:")
-        self.view.addGestureRecognizer(dismiss)
+//    func setupTouchEvents() {
+//        let dismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard:")
+//        carousel.addGestureRecognizer(dismiss)
+//    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        self.view.endEditing(true)
     }
     
-    func dismissKeyboard(gestureRecognizer: UIGestureRecognizer) {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
+    func fadeCultureNameOut() {
+        UIView.animateWithDuration(0.25, animations: {
+            self.cultureName.alpha = 0
+            }) { Void in
+               let view = self.carousel.currentItemView as! CultureFlagView
+                self.cultureName.text = view.culture
+        }
+    }
+    
+    func fadeCultureNameIn() {
+        UIView.animateWithDuration(0.25, animations: {
+            self.cultureName.alpha = 1
+        })
+    }
+    
+    func configureSearchBar() {
+        let scheduler = MainScheduler.sharedInstance
+        
+        searchBar.rx_text
+            .asDriver()
+            .throttle(0.3, scheduler)
+            .distinctUntilChanged()
+            .driveNext { query in
+                let index = self.searchQuery(query)
+                if index != -1 {
+                    print(index)
+                    self.searching = true
+                    self.moveToIndex(index, completion: { Void in
+                        self.searching = false
+                    })
+                }
+            }
+            .addDisposableTo(disposeBag)
+                
+                
+        }
+    
+    func searchQuery(query: String) -> Int {
+        if query != "" {
+            var tempList: [String] = []
+            let cultures = Cultures.sharedInstance.cultures
+            for var index = 0; index < cultures.count; index += 1 {
+                if cultures[index].lowercaseString.rangeOfString(query) != nil {
+                    tempList.append(cultures[index])
+                }
+                
+            }
+            if tempList.count != 0 {
+                let sorted = tempList.sort()
+            
+                return cultures.indexOf(sorted[0])!
+            }
+        }
+        return -1
+    }
+
+    func moveToIndex(index: Int, completion: (Void) -> Void) {
+        carousel.scrollToItemAtIndex(index, animated: true)
+        completion()
     }
 
 }
 
+
+
+
 extension CultureSelectionViewController: iCarouselDelegate {
     
     func carousel(carousel: iCarousel!, didSelectItemAtIndex index: Int) {
-        return
+        if searching == false {
+            dismissKeyboard()
+        }
     }
+    
+    func carouselDidScroll(carousel: iCarousel!) {
+//        if searching == false {
+//            dismissKeyboard()
+//        }
+        
+        fadeCultureNameOut()
+    }
+    
+//    func carouselWillBeginScrollingAnimation(carousel: iCarousel!) {
+//        fadeCultureNameOut()
+//    }
+    
+    func carouselDidEndScrollingAnimation(carousel: iCarousel!) {
+        fadeCultureNameIn()
+    }
+    
+
     
 }
 
@@ -69,7 +161,5 @@ extension CultureSelectionViewController: iCarouselDataSource {
 }
 
 extension CultureSelectionViewController: UISearchBarDelegate {
-    func carouselDidScroll(carousel: iCarousel!) {
-        return
-    }
+    
 }

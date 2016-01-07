@@ -269,8 +269,8 @@
 				BF2D9CA91C151F5300A11A1A /* LoginWithFacebook.swift */,
 				BFBEBFC01C28D67400CA6934 /* CultureFlagView.xib */,
 				BFBEBFC41C28D6C200CA6934 /* CultureFlagView.swift */,
-				BFBEC01D1C3DBD1100CA6934 /* ProfileCollectionViewCell.swift */,
 				BFBEC01F1C3DBD5800CA6934 /* ProfileCollectionViewCell.xib */,
+				BFBEC01D1C3DBD1100CA6934 /* ProfileCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

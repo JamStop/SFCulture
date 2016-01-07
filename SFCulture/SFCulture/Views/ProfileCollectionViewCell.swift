@@ -15,4 +15,41 @@ import RxCocoa
 
 class ProfileCollectionViewCell: UICollectionViewCell {
     
+    var view: UIView!
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var caption: UILabel!
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        
+        xibSetup()
+    }
+    
+    
+    func xibSetup() {
+        view = loadViewFromNib()
+        view.frame = bounds
+        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+        addSubview(view)
+        
+        profileImage.layer.cornerRadius = profileImage.frame.size.width/2
+        profileImage.clipsToBounds = true
+        
+    }
+    
+    func loadViewFromNib() -> UIView {
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let nib = UINib(nibName: "ProfileCollectionViewCell", bundle: bundle)
+        let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        return view
+    }
+    
+    init(frame: CGRect, culture: String, index: Int) {
+        super.init(frame: frame)
+        
+        xibSetup()
+    }
+    
 }

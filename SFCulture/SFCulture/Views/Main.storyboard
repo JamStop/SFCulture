@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Culture Selection View Controller-->
@@ -26,27 +27,58 @@
                                 <rect key="frame" x="-4" y="20" width="383" height="44"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Culture:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="ZVx-FI-Y4B">
+                                <rect key="frame" x="112" y="84" width="150" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Culture Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="w5s-Gg-WWD">
+                                <rect key="frame" x="65" y="113" width="244" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <color key="textColor" red="1" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ahd-m6-MMz" firstAttribute="leading" secondItem="2or-fB-hu7" secondAttribute="leadingMargin" constant="-20" id="5bv-uK-QRT"/>
+                            <constraint firstItem="ZVx-FI-Y4B" firstAttribute="top" secondItem="ahd-m6-MMz" secondAttribute="bottom" constant="20" id="6sN-LZ-iuM"/>
                             <constraint firstItem="6cU-gC-6Eg" firstAttribute="top" secondItem="rnQ-rk-d13" secondAttribute="bottom" id="6to-aG-9tE"/>
+                            <constraint firstItem="w5s-Gg-WWD" firstAttribute="width" secondItem="6cU-gC-6Eg" secondAttribute="width" multiplier="0.65" id="72T-f8-tIH"/>
+                            <constraint firstItem="ZVx-FI-Y4B" firstAttribute="centerX" secondItem="6cU-gC-6Eg" secondAttribute="centerX" id="9jQ-Vg-A8w"/>
+                            <constraint firstItem="w5s-Gg-WWD" firstAttribute="centerX" secondItem="6cU-gC-6Eg" secondAttribute="centerX" id="C7a-we-yh2"/>
                             <constraint firstItem="ahd-m6-MMz" firstAttribute="top" secondItem="rnQ-rk-d13" secondAttribute="bottom" id="EsV-uN-35w"/>
+                            <constraint firstItem="w5s-Gg-WWD" firstAttribute="centerX" secondItem="2or-fB-hu7" secondAttribute="centerX" id="Knk-Yi-beN"/>
+                            <constraint firstItem="ZVx-FI-Y4B" firstAttribute="centerX" secondItem="2or-fB-hu7" secondAttribute="centerX" id="Ml2-vn-u14"/>
+                            <constraint firstItem="ZVx-FI-Y4B" firstAttribute="width" secondItem="6cU-gC-6Eg" secondAttribute="width" multiplier="0.4" id="RiD-FS-Bov"/>
                             <constraint firstAttribute="trailing" secondItem="6cU-gC-6Eg" secondAttribute="trailing" id="TIb-cz-vHF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ahd-m6-MMz" secondAttribute="trailing" constant="-20" id="dfE-4g-FTO"/>
+                            <constraint firstItem="ZVx-FI-Y4B" firstAttribute="centerX" secondItem="2or-fB-hu7" secondAttribute="centerX" id="jpA-ap-MGE"/>
+                            <constraint firstItem="w5s-Gg-WWD" firstAttribute="centerX" secondItem="2or-fB-hu7" secondAttribute="centerX" id="mwu-mz-9sX"/>
                             <constraint firstItem="6cU-gC-6Eg" firstAttribute="leading" secondItem="2or-fB-hu7" secondAttribute="leading" id="tA0-Qv-UJP"/>
                             <constraint firstItem="edf-x3-SA3" firstAttribute="top" secondItem="6cU-gC-6Eg" secondAttribute="bottom" id="uOi-GE-Lej"/>
+                            <constraint firstItem="w5s-Gg-WWD" firstAttribute="top" secondItem="ZVx-FI-Y4B" secondAttribute="bottom" constant="5" id="unf-OY-h2T"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="C7a-we-yh2"/>
+                                <exclude reference="mwu-mz-9sX"/>
+                                <exclude reference="9jQ-Vg-A8w"/>
+                                <exclude reference="Ml2-vn-u14"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="carousel" destination="6cU-gC-6Eg" id="hTI-IR-n1r"/>
+                        <outlet property="cultureName" destination="w5s-Gg-WWD" id="6EW-ws-Xbq"/>
                         <outlet property="searchBar" destination="ahd-m6-MMz" id="Snn-cI-Iee"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xg-CO-bLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="243" y="255"/>
+            <point key="canvasLocation" x="242.5" y="254.5"/>
         </scene>
         <!--Chat-->
         <scene sceneID="J63-Hg-VkY">

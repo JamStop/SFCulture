@@ -69,8 +69,7 @@
                                         <exclude reference="vO1-ba-VPJ"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="63.5" y="306" width="248.5" height="55"/>
+                                <variation key="heightClass=regular">
                                     <mask key="constraints">
                                         <exclude reference="vO1-ba-VPJ"/>
                                     </mask>

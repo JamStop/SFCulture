@@ -15,11 +15,13 @@ import SDWebImage
 
 
 var ref: Firebase!
-let facebookLogin = FBSDKLoginManager()
 
 class FirebaseLoginHelper {
     
+    let facebookLogin = FBSDKLoginManager()
+    
     let realm = try! Realm()
+    let imageDownloader = SDWebImageDownloader()
 
     func login(viewController: UIViewController) {
         ref = Firebase(url: "https://sfculture.firebaseio.com/")
@@ -77,22 +79,28 @@ class FirebaseLoginHelper {
                     ref.childByAppendingPath("users").childByAppendingPath(uid).setValue(userInfo)
                     
                     print(userData)
+                    print(NSURL(string: pictureURL!)!)
                     
-                    SDWebImageDownloader().downloadImageWithURL(NSURL(fileURLWithPath: pictureURL!), options: SDWebImageDownloaderOptions.HighPriority, progress: nil, completed: { (image, data, error, bool) in
+                    self.imageDownloader.downloadImageWithURL(NSURL(string: pictureURL!)!, options: SDWebImageDownloaderOptions.HighPriority, progress: {
+                        (start, finish) in
+                        print(start, finish)
+                        }, completed: {
+                        (image, data, error, bool) in
                         if error == nil {
                             let newUser = User(value: [
                                 "uid": uid,
                                 "name": userData["name"]!,
-                                "profilePicture": image
+                                "profilePicture": data
                             ])
                             
-                            let newCurrentUser = CurrentUser(value: [newUser])
+                            let newCurrentUser = CurrentUser(value: [newUser, 0])
                             
-                            try! self.realm.write {
-                                self.realm.add(newCurrentUser, update: true)
-                            }
+                            dispatch_async(dispatch_get_main_queue(), {
+                                try! self.realm.write {
+                                    self.realm.add(newCurrentUser, update: true)
+                                }
+                            })
                         }
-                        
                         
                     })
 //                    let newUser = User(value: [

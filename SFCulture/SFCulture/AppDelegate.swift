@@ -8,16 +8,30 @@
 
 import UIKit
 import FBSDKCoreKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let realm = try! Realm()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        let currentUser = realm.objects(CurrentUser)
+        
+        print(currentUser.count)
+        
+        if currentUser.count > 0 {
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            let vc = mainStoryboard.instantiateInitialViewController()
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+        }
         
         return true
     }

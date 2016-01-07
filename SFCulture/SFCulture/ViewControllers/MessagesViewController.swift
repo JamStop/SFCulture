@@ -32,8 +32,8 @@ class MessagesViewController: JSQMessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currentMessageGroupId = realm.objects(currentMessageGroup)[0].messageGroup!.id
-        user = realm.objects(currentUser)[0].user
+        currentMessageGroupId = realm.objects(CurrentMessageGroup)[0].messageGroup!.id
+        user = realm.objects(CurrentUser)[0].user
         
         messagesRef = Firebase(url: "https://sfculture.firebaseio.com/messageGroups/" + currentMessageGroupId)
 

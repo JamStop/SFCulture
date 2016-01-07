@@ -12,23 +12,25 @@ import RealmSwift
 class User: Object {
     dynamic var uid = ""
     dynamic var name = ""
-    dynamic var profilePicture: UIImage?
+    dynamic var profilePicture: NSData?
     dynamic var culture: Culture?
-    dynamic var messageGroups: [MessageGroup] = []
+    let messageGroups = List<MessageGroup>()
     
 }
 
 class CurrentUser: Object {
     dynamic var user: User?
+    dynamic var id = 0
     override static func primaryKey() -> String? {
-        return "user"
+        return "id"
     }
 }
 
 class CurrentMessageGroup: Object {
     dynamic var messageGroup: MessageGroup?
+    dynamic var id = 0
     override static func primaryKey() -> String? {
-        return "messageGroup"
+        return "id"
     }
 }
 
@@ -55,7 +57,7 @@ class Message: Object {
     dynamic var senderDisplayName = ""
     dynamic var date = NSDate(timeIntervalSince1970: 1)
     dynamic var isMediaMessage = false
-    dynamic var messageHash: UInt = 0
+//    dynamic var messageHash: UInt = 0
     dynamic var text = ""
     dynamic var messageGroup: MessageGroup?
 }

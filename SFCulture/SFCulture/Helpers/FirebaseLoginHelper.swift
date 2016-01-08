@@ -29,7 +29,7 @@ class FirebaseLoginHelper {
             (facebookResult, facebookError) -> Void in
             if facebookError != nil {
                 print("Facebook login failed. Error \(facebookError)")
-                completion(false)
+//                completion(false)
             } else if facebookResult.isCancelled {
                 print("Facebook login was cancelled.")
                 completion(false)
@@ -40,12 +40,12 @@ class FirebaseLoginHelper {
                     withCompletionBlock: { error, authData in
                         if error != nil {
                             print("Login failed. \(error)")
+                            completion(false)
                             return
                         } else {
                             print("Logged in! \(authData)")
                             print(authData.provider)
-                            
-                            self.getFBUserData()
+                            self.getFBUserData(completion)
                         }
                 })
             }
@@ -53,10 +53,13 @@ class FirebaseLoginHelper {
     }
     
     
-    func getFBUserData() {
+    func getFBUserData(completion: (Bool) -> Void) {
         if((FBSDKAccessToken.currentAccessToken()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
-                if (error == nil){
+                if error != nil {
+                    completion(false)
+                }
+                else {
                     let userData : NSDictionary = result as! NSDictionary
                     let uid = userData["id"] as! String
                     
@@ -99,6 +102,7 @@ class FirebaseLoginHelper {
                             dispatch_async(dispatch_get_main_queue(), {
                                 try! self.realm.write {
                                     self.realm.add(newCurrentUser, update: true)
+                                    completion(true)
                                 }
                             })
                         }

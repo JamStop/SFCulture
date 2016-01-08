@@ -25,7 +25,21 @@
                         <constraint firstAttribute="width" secondItem="e1I-YQ-7tB" secondAttribute="height" multiplier="1:1" id="0Qe-mR-Dl9"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muhammed Othman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3F8-XC-udH">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pixar Wizard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nmf-8K-wrg">
+                    <rect key="frame" x="24" y="197" width="140" height="14.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="160" id="ECA-FG-x4M"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ECA-FG-x4M"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muhammed Othman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3F8-XC-udH">
                     <rect key="frame" x="24" y="171" width="140" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="160" id="aqg-0t-Mcb"/>
@@ -33,25 +47,23 @@
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pixar Wizard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmf-8K-wrg">
-                    <rect key="frame" x="58.5" y="197" width="71" height="14.5"/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="160" id="ECA-FG-x4M"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <color key="textColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="aqg-0t-Mcb"/>
+                        </mask>
+                    </variation>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="3F8-XC-udH" firstAttribute="top" secondItem="e1I-YQ-7tB" secondAttribute="bottom" constant="7.5" id="5tb-38-gDZ"/>
                 <constraint firstItem="e1I-YQ-7tB" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.75" placeholder="YES" id="Aqe-94-GYU"/>
+                <constraint firstItem="Nmf-8K-wrg" firstAttribute="width" secondItem="e1I-YQ-7tB" secondAttribute="width" id="HyX-rG-YeT"/>
                 <constraint firstItem="Nmf-8K-wrg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KMn-mk-GUN"/>
                 <constraint firstItem="e1I-YQ-7tB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-30" id="LOz-6F-B9H"/>
                 <constraint firstItem="3F8-XC-udH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PC1-lb-SYi"/>
                 <constraint firstItem="Nmf-8K-wrg" firstAttribute="top" secondItem="3F8-XC-udH" secondAttribute="bottom" constant="8" id="S1k-gl-gal"/>
+                <constraint firstItem="3F8-XC-udH" firstAttribute="width" secondItem="e1I-YQ-7tB" secondAttribute="width" id="YiJ-6q-hwX"/>
                 <constraint firstItem="e1I-YQ-7tB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jfi-ai-RQ4"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

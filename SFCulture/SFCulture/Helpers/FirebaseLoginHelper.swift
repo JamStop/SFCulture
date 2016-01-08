@@ -14,28 +14,29 @@ import RealmSwift
 import SDWebImage
 
 
-var ref: Firebase!
-
 class FirebaseLoginHelper {
+    var ref: Firebase!
     
     let facebookLogin = FBSDKLoginManager()
     
     let realm = try! Realm()
     let imageDownloader = SDWebImageDownloader()
 
-    func login(viewController: UIViewController) {
+    func login(viewController: UIViewController, completion: (Bool) -> Void) {
         ref = Firebase(url: "https://sfculture.firebaseio.com/")
         
         facebookLogin.logInWithReadPermissions(["public_profile", "user_friends", "email"], fromViewController: viewController, handler: {
             (facebookResult, facebookError) -> Void in
             if facebookError != nil {
                 print("Facebook login failed. Error \(facebookError)")
+                completion(false)
             } else if facebookResult.isCancelled {
                 print("Facebook login was cancelled.")
+                completion(false)
             } else {
                 let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
                 print(facebookResult)
-                ref.authWithOAuthProvider("facebook", token: accessToken,
+                self.ref.authWithOAuthProvider("facebook", token: accessToken,
                     withCompletionBlock: { error, authData in
                         if error != nil {
                             print("Login failed. \(error)")
@@ -76,7 +77,7 @@ class FirebaseLoginHelper {
                     
                     print(userInfo)
                     
-                    ref.childByAppendingPath("users").childByAppendingPath(uid).setValue(userInfo)
+                    self.ref.childByAppendingPath("users").childByAppendingPath(uid).setValue(userInfo)
                     
                     print(userData)
                     print(NSURL(string: pictureURL!)!)

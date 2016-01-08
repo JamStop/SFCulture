@@ -14,6 +14,8 @@
 		BF2D9CA81C151E1000A11A1A /* LoginWithFacebook.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2D9CA71C151E1000A11A1A /* LoginWithFacebook.xib */; };
 		BF2D9CAA1C151F5300A11A1A /* LoginWithFacebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2D9CA91C151F5300A11A1A /* LoginWithFacebook.swift */; };
 		BF2D9CAC1C162B1100A11A1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2D9CAB1C162B1100A11A1A /* LoginViewController.swift */; };
+		BF4CB0EC1C3EFC1A00A370D7 /* MessageGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4CB0EB1C3EFC1900A370D7 /* MessageGroupTableViewCell.xib */; };
+		BF4CB0EE1C3EFC5700A370D7 /* MessageGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4CB0ED1C3EFC5700A370D7 /* MessageGroupTableViewCell.swift */; };
 		BF54F9DF1C0975E9004E2DFD /* UserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F9DE1C0975E9004E2DFD /* UserJSON.swift */; };
 		BFBEBF571C1C08A100CA6934 /* FirebaseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBF561C1C08A100CA6934 /* FirebaseLoginHelper.swift */; };
 		BFBEBFB21C220A9100CA6934 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFB11C220A9100CA6934 /* Realm.swift */; };
@@ -66,6 +68,8 @@
 		BF2D9CA71C151E1000A11A1A /* LoginWithFacebook.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWithFacebook.xib; sourceTree = "<group>"; };
 		BF2D9CA91C151F5300A11A1A /* LoginWithFacebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWithFacebook.swift; sourceTree = "<group>"; };
 		BF2D9CAB1C162B1100A11A1A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF4CB0EB1C3EFC1900A370D7 /* MessageGroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageGroupTableViewCell.xib; sourceTree = "<group>"; };
+		BF4CB0ED1C3EFC5700A370D7 /* MessageGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageGroupTableViewCell.swift; sourceTree = "<group>"; };
 		BF54F9DE1C0975E9004E2DFD /* UserJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserJSON.swift; sourceTree = "<group>"; };
 		BFBEBF561C1C08A100CA6934 /* FirebaseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLoginHelper.swift; sourceTree = "<group>"; };
 		BFBEBFB11C220A9100CA6934 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 				BFBEBFC41C28D6C200CA6934 /* CultureFlagView.swift */,
 				BFBEC01F1C3DBD5800CA6934 /* ProfileCollectionViewCell.xib */,
 				BFBEC01D1C3DBD1100CA6934 /* ProfileCollectionViewCell.swift */,
+				BF4CB0EB1C3EFC1900A370D7 /* MessageGroupTableViewCell.xib */,
+				BF4CB0ED1C3EFC5700A370D7 /* MessageGroupTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 				BF2D9CA81C151E1000A11A1A /* LoginWithFacebook.xib in Resources */,
 				BFBEBFC11C28D67400CA6934 /* CultureFlagView.xib in Resources */,
 				BFBEBFBF1C23C05100CA6934 /* Main.storyboard in Resources */,
+				BF4CB0EC1C3EFC1A00A370D7 /* MessageGroupTableViewCell.xib in Resources */,
 				BFBEC0201C3DBD5800CA6934 /* ProfileCollectionViewCell.xib in Resources */,
 				BFF3C40B1BFE6C4A0087F60D /* LaunchScreen.storyboard in Resources */,
 				BFF3C4081BFE6C4A0087F60D /* Assets.xcassets in Resources */,
@@ -477,6 +484,7 @@
 				BF2D9CAA1C151F5300A11A1A /* LoginWithFacebook.swift in Sources */,
 				BF54F9DF1C0975E9004E2DFD /* UserJSON.swift in Sources */,
 				BFBEBFBB1C236FBC00CA6934 /* iCarousel.m in Sources */,
+				BF4CB0EE1C3EFC5700A370D7 /* MessageGroupTableViewCell.swift in Sources */,
 				BFF3C43A1BFFB1A40087F60D /* ErrorHandling.swift in Sources */,
 				BFBEC01E1C3DBD1100CA6934 /* ProfileCollectionViewCell.swift in Sources */,
 				BF2D9CA01C12BD0400A11A1A /* JHProgressHUD.swift in Sources */,

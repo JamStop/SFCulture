@@ -10,10 +10,15 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import RealmSwift
 
 class LoginViewController: UIViewController {
     
+    let realm = try! Realm()
+    let helper = APIHelper()
+    
     private let loginHelper = FirebaseLoginHelper()
+    private let apiHelper = APIHelper()
     
     // MARK: Outlets
     @IBOutlet weak var loginWithFacebookButton: LoginWithFacebook!
@@ -41,7 +46,35 @@ class LoginViewController: UIViewController {
         loginHelper.login(self) { (success) -> Void in
             if success {
                 print(success)
-                self.hideLoadingIndicator()
+//                self.hideLoadingIndicator()
+                
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                let currentUser = self.realm.objects(CurrentUser)[0]
+                self.apiHelper.getCultureForUser((currentUser.user?.uid)!, handler: { result, error in
+                    if let error = error {
+                        print(error)
+                    }
+                    else {
+//                        if let culture = result {
+                        print(result)
+                        let cultureVC = mainStoryboard.instantiateViewControllerWithIdentifier("culture")
+                        cultureVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+                        self.presentViewController(cultureVC, animated: true, completion: nil)
+//                        }
+//                        else {
+//                            print(result)
+//                            let cultureSelectVC = mainStoryboard.instantiateViewControllerWithIdentifier("selectCulture")
+//                            cultureSelectVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+//                            self.presentViewController(cultureSelectVC, animated: true, completion: nil)
+//                        }
+                    }
+                })
+//                if let usersCulture = currentUser.user?.culture {
+//                    let cultureVC = mainStoryboard.instantiateViewControllerWithIdentifier("culture")
+//                    cultureVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+//                    self.presentViewController(cultureVC, animated: true, completion: nil)
+//                }
+                
             }
             else {
                 print(success)

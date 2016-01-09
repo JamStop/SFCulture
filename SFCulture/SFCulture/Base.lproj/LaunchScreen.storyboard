@@ -16,12 +16,63 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SFCULTURE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="LZ7-CY-tNi">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landing2" translatesAutoresizingMaskIntoConstraints="NO" id="OeF-aQ-OUt">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LZ7-CY-tNi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ing-XU-bs9"/>
+                            <constraint firstAttribute="trailing" secondItem="OeF-aQ-OUt" secondAttribute="trailing" id="NiN-hj-QPP"/>
+                            <constraint firstItem="OeF-aQ-OUt" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="gC7-fe-UxE"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="OeF-aQ-OUt" secondAttribute="bottom" id="gLe-ig-rMe"/>
+                            <constraint firstItem="LZ7-CY-tNi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="oJo-og-LaI"/>
+                            <constraint firstItem="OeF-aQ-OUt" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="uQE-Hf-65w"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="LZ7-CY-tNi"/>
+                                <exclude reference="OeF-aQ-OUt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="NiN-hj-QPP"/>
+                                <exclude reference="gC7-fe-UxE"/>
+                                <exclude reference="uQE-Hf-65w"/>
+                                <exclude reference="Ing-XU-bs9"/>
+                                <exclude reference="oJo-og-LaI"/>
+                                <exclude reference="gLe-ig-rMe"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="LZ7-CY-tNi"/>
+                                <include reference="OeF-aQ-OUt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="NiN-hj-QPP"/>
+                                <include reference="gC7-fe-UxE"/>
+                                <include reference="uQE-Hf-65w"/>
+                                <include reference="Ing-XU-bs9"/>
+                                <include reference="oJo-og-LaI"/>
+                                <include reference="gLe-ig-rMe"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Landing2" width="375" height="667"/>
+    </resources>
 </document>

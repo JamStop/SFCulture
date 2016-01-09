@@ -10,7 +10,7 @@
         <!--Culture Selection View Controller-->
         <scene sceneID="h7I-hD-vp2">
             <objects>
-                <viewController id="ZBP-Lt-fXr" customClass="CultureSelectionViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectCulture" id="ZBP-Lt-fXr" customClass="CultureSelectionViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rnQ-rk-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="edf-x3-SA3"/>
@@ -79,6 +79,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xg-CO-bLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="242.5" y="254.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hcM-eX-lt4">
+            <objects>
+                <viewController id="PTA-bu-bgC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UPG-Ui-PgY"/>
+                        <viewControllerLayoutGuide type="bottom" id="cWT-MJ-Q4d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jEf-vc-4wh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y9I-T8-E1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="953"/>
         </scene>
         <!--Chat-->
         <scene sceneID="J63-Hg-VkY">
@@ -296,7 +314,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="y58-j7-F9w">
             <objects>
-                <tabBarController id="DgI-jc-EpL" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="culture" id="DgI-jc-EpL" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="HJ1-L3-PpO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>

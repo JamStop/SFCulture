@@ -17,15 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landing3" translatesAutoresizingMaskIntoConstraints="NO" id="OeF-aQ-OUt">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SFCULTURE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="LZ7-CY-tNi">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landing2" translatesAutoresizingMaskIntoConstraints="NO" id="OeF-aQ-OUt">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -38,8 +38,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="LZ7-CY-tNi"/>
                                 <exclude reference="OeF-aQ-OUt"/>
+                                <exclude reference="LZ7-CY-tNi"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="NiN-hj-QPP"/>
@@ -52,8 +52,8 @@
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
-                                <include reference="LZ7-CY-tNi"/>
                                 <include reference="OeF-aQ-OUt"/>
+                                <include reference="LZ7-CY-tNi"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="NiN-hj-QPP"/>
@@ -73,6 +73,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Landing2" width="375" height="667"/>
+        <image name="Landing3" width="375" height="667"/>
     </resources>
 </document>

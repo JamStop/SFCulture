@@ -31,6 +31,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eq-Tx-FmQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <segue destination="n1o-iv-mKr" kind="embed" id="btp-Zw-u7p"/>
+                                </connections>
+                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gje-2r-3yQ" customClass="LoginWithFacebook" customModule="SFCulture" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
@@ -69,12 +75,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eq-Tx-FmQ">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <connections>
-                                    <segue destination="n1o-iv-mKr" kind="embed" id="btp-Zw-u7p"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -95,9 +95,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="6eq-Tx-FmQ"/>
                                 <exclude reference="Gje-2r-3yQ"/>
                                 <exclude reference="diY-4p-09T"/>
-                                <exclude reference="6eq-Tx-FmQ"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Ekl-Ba-HVK"/>
@@ -114,9 +114,9 @@
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
+                                <include reference="6eq-Tx-FmQ"/>
                                 <include reference="Gje-2r-3yQ"/>
                                 <include reference="diY-4p-09T"/>
-                                <include reference="6eq-Tx-FmQ"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Ekl-Ba-HVK"/>

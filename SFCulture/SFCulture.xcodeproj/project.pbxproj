@@ -17,6 +17,7 @@
 		BF4CB0EC1C3EFC1A00A370D7 /* MessageGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4CB0EB1C3EFC1900A370D7 /* MessageGroupTableViewCell.xib */; };
 		BF4CB0EE1C3EFC5700A370D7 /* MessageGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4CB0ED1C3EFC5700A370D7 /* MessageGroupTableViewCell.swift */; };
 		BF4CB0F01C4064AF00A370D7 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4CB0EF1C4064AE00A370D7 /* APIHelper.swift */; };
+		BF4CB0F21C41E24F00A370D7 /* IntermediateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4CB0F11C41E24F00A370D7 /* IntermediateViewController.swift */; };
 		BF54F9DF1C0975E9004E2DFD /* UserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F9DE1C0975E9004E2DFD /* UserJSON.swift */; };
 		BFBEBF571C1C08A100CA6934 /* FirebaseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBF561C1C08A100CA6934 /* FirebaseLoginHelper.swift */; };
 		BFBEBFB21C220A9100CA6934 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBFB11C220A9100CA6934 /* Realm.swift */; };
@@ -72,6 +73,7 @@
 		BF4CB0EB1C3EFC1900A370D7 /* MessageGroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageGroupTableViewCell.xib; sourceTree = "<group>"; };
 		BF4CB0ED1C3EFC5700A370D7 /* MessageGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageGroupTableViewCell.swift; sourceTree = "<group>"; };
 		BF4CB0EF1C4064AE00A370D7 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		BF4CB0F11C41E24F00A370D7 /* IntermediateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntermediateViewController.swift; sourceTree = "<group>"; };
 		BF54F9DE1C0975E9004E2DFD /* UserJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserJSON.swift; sourceTree = "<group>"; };
 		BFBEBF561C1C08A100CA6934 /* FirebaseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLoginHelper.swift; sourceTree = "<group>"; };
 		BFBEBFB11C220A9100CA6934 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				BFBEBFBC1C2371F200CA6934 /* CultureSelectionViewController.swift */,
 				BFBEC0131C3A10CB00CA6934 /* MainTabBarController.swift */,
 				BFBEC0151C3A115E00CA6934 /* MessagesViewController.swift */,
+				BF4CB0F11C41E24F00A370D7 /* IntermediateViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				BF2D9CA21C12BD3700A11A1A /* CircleProgressView.swift in Sources */,
 				BFBEC01C1C3D9CB300CA6934 /* Cultures.swift in Sources */,
 				BFF3C4011BFE6C4A0087F60D /* AppDelegate.swift in Sources */,
+				BF4CB0F21C41E24F00A370D7 /* IntermediateViewController.swift in Sources */,
 				BFBEC0161C3A115E00CA6934 /* MessagesViewController.swift in Sources */,
 				BF2D9CAC1C162B1100A11A1A /* LoginViewController.swift in Sources */,
 				BFBEBFB41C2226E200CA6934 /* JSQMessage.swift in Sources */,

@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
     // Keeps the Rx resources for deinit()
     let disposeBag = DisposeBag()
     
-    let loginErrorAlert = UIAlertController(title: "Something went wrong, please try again!", message: "", preferredStyle: .Alert)
+    var loginErrorAlert: UIAlertController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
         
         self.loginWithFacebookButton.cellButton.addTarget(self, action: "loginWithFacebookButtonPressed:", forControlEvents: .TouchUpInside)
         
+        loginErrorAlert = UIAlertController(title: "Something went wrong, please try again!", message: "", preferredStyle: .Alert)
         loginErrorAlert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
         
         

@@ -26,15 +26,13 @@ class CultureSelectionViewController: UIViewController {
     let apiHelper = APIHelper()
     let realm = try! Realm()
     
+    var cultureSelectionAlert: UIAlertController!
+    
     var searching = false
     
     @IBAction func selectCultureButtonTapped(sender: UIButton) {
         if !scrolling {
-            let selectedCulture = cultureName.text
-            let currentUser = self.realm.objects(CurrentUser)[0]
-            apiHelper.setCultureForUser(currentUser.user!.uid, culture: selectedCulture!, handler: {
-                result, error in
-            })
+            self.presentViewController(cultureSelectionAlert, animated: true, completion: nil)
         }
     }
     
@@ -52,6 +50,11 @@ class CultureSelectionViewController: UIViewController {
 //        setupTouchEvents()
         
         configureSearchBar()
+        
+        cultureSelectionAlert = UIAlertController(title: "Are you sure?", message: "", preferredStyle: .Alert)
+        cultureSelectionAlert.addAction(UIAlertAction(title: "Yes", style: .Cancel, handler: { [unowned self] (alert: UIAlertAction!) in
+            self.selectCulture()}))
+        cultureSelectionAlert.addAction(UIAlertAction(title: "No", style: .Default, handler: nil))
 
     }
     
@@ -150,6 +153,32 @@ extension CultureSelectionViewController: iCarouselDelegate {
     func carouselDidEndScrollingAnimation(carousel: iCarousel!) {
         fadeCultureNameIn()
         scrolling = false
+    }
+    
+    func selectCulture() {
+        let selectedCulture = cultureName.text
+        let currentUser = self.realm.objects(CurrentUser)[0]
+        apiHelper.setCultureForUser(currentUser.user!.uid, culture: selectedCulture!, handler: {
+            result, error in
+            if error != "" {
+                print("Failed fetching data")
+            }
+            else {
+                let culture = Culture()
+                culture.name = selectedCulture!
+                try! self.realm.write() {
+                    currentUser.user?.culture = culture
+                    self.segueToMainApp()
+                }
+            }
+        })
+    }
+    
+    func segueToMainApp() {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let cultureVC = mainStoryboard.instantiateViewControllerWithIdentifier("culture")
+        cultureVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+        self.presentViewController(cultureVC, animated: true, completion: nil)
     }
     
 

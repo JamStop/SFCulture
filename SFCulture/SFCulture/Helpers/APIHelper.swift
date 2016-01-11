@@ -32,7 +32,7 @@ class APIHelper {
                 handler(result: nil, error: "Error fetching user culture")
                 return
             }
-            guard let culture = snapshot.value["culture"] as? String else {
+            guard let culture = snapshot.value["cultures"] as? String else {
                 handler(result: nil, error: nil)
                 return
             }
@@ -43,7 +43,7 @@ class APIHelper {
     
     func setCultureForUser(userid: String, culture: String, handler: resultHandler) {
         ref = Firebase(url: firebaseURL + "users/" + userid)
-        ref.updateChildValues(["cultures": culture], withCompletionBlock: { error, firebase in
+        ref.updateChildValues(["culture": culture], withCompletionBlock: { error, firebase in
             if error != nil {
                 handler(result: "", error: error.localizedDescription)
             }

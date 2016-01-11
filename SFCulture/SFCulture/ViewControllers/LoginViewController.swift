@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
                     else {
 //                        if let culture = result {
                         print(result)
-                        let cultureVC = mainStoryboard.instantiateViewControllerWithIdentifier("culture")
+                        let cultureVC = mainStoryboard.instantiateViewControllerWithIdentifier("checkCulture")
                         cultureVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
                         self.presentViewController(cultureVC, animated: true, completion: nil)
 //                        }

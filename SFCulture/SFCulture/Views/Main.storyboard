@@ -97,7 +97,7 @@
         <!--Intermediate View Controller-->
         <scene sceneID="hcM-eX-lt4">
             <objects>
-                <viewController id="PTA-bu-bgC" customClass="IntermediateViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="checkCulture" id="PTA-bu-bgC" customClass="IntermediateViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UPG-Ui-PgY"/>
                         <viewControllerLayoutGuide type="bottom" id="cWT-MJ-Q4d"/>

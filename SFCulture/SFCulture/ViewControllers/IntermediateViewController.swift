@@ -57,6 +57,9 @@ class IntermediateViewController: UIViewController {
                     handler(result: nil, error: "Need to set user culture")
                     return
                 }
+                try! self.realm.write {
+                    currentUser.user?.culture = Culture(value: ["name": culture])
+                }
                 
                 handler(result: culture, error: nil)
                 

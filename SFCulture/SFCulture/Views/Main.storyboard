@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -39,6 +40,16 @@
                                 <color key="textColor" red="1" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZZ-WC-Gk2">
+                                <rect key="frame" x="137" y="516" width="101" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aZZ-WC-Gk2" secondAttribute="height" multiplier="101:35" id="0Vy-CY-0qD"/>
+                                </constraints>
+                                <state key="normal" image="SelectButton"/>
+                                <connections>
+                                    <action selector="selectCultureButtonTapped:" destination="ZBP-Lt-fXr" eventType="touchUpInside" id="Noq-YZ-4Pj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -49,7 +60,9 @@
                             <constraint firstItem="ZVx-FI-Y4B" firstAttribute="centerX" secondItem="6cU-gC-6Eg" secondAttribute="centerX" id="9jQ-Vg-A8w"/>
                             <constraint firstItem="w5s-Gg-WWD" firstAttribute="centerX" secondItem="6cU-gC-6Eg" secondAttribute="centerX" id="C7a-we-yh2"/>
                             <constraint firstItem="ahd-m6-MMz" firstAttribute="top" secondItem="rnQ-rk-d13" secondAttribute="bottom" id="EsV-uN-35w"/>
+                            <constraint firstItem="aZZ-WC-Gk2" firstAttribute="centerX" secondItem="2or-fB-hu7" secondAttribute="centerX" id="KRI-ew-sNK"/>
                             <constraint firstItem="w5s-Gg-WWD" firstAttribute="centerX" secondItem="2or-fB-hu7" secondAttribute="centerX" id="Knk-Yi-beN"/>
+                            <constraint firstItem="aZZ-WC-Gk2" firstAttribute="width" secondItem="2or-fB-hu7" secondAttribute="height" multiplier="101:667" id="LlQ-qK-fEN"/>
                             <constraint firstItem="ZVx-FI-Y4B" firstAttribute="centerX" secondItem="2or-fB-hu7" secondAttribute="centerX" id="Ml2-vn-u14"/>
                             <constraint firstItem="ZVx-FI-Y4B" firstAttribute="width" secondItem="6cU-gC-6Eg" secondAttribute="width" multiplier="0.4" id="RiD-FS-Bov"/>
                             <constraint firstAttribute="trailing" secondItem="6cU-gC-6Eg" secondAttribute="trailing" id="TIb-cz-vHF"/>
@@ -57,6 +70,7 @@
                             <constraint firstItem="ZVx-FI-Y4B" firstAttribute="centerX" secondItem="2or-fB-hu7" secondAttribute="centerX" id="jpA-ap-MGE"/>
                             <constraint firstItem="w5s-Gg-WWD" firstAttribute="centerX" secondItem="2or-fB-hu7" secondAttribute="centerX" id="mwu-mz-9sX"/>
                             <constraint firstItem="6cU-gC-6Eg" firstAttribute="leading" secondItem="2or-fB-hu7" secondAttribute="leading" id="tA0-Qv-UJP"/>
+                            <constraint firstItem="aZZ-WC-Gk2" firstAttribute="centerY" secondItem="2or-fB-hu7" secondAttribute="centerY" multiplier="1.6" id="tLr-CF-et5"/>
                             <constraint firstItem="edf-x3-SA3" firstAttribute="top" secondItem="6cU-gC-6Eg" secondAttribute="bottom" id="uOi-GE-Lej"/>
                             <constraint firstItem="w5s-Gg-WWD" firstAttribute="top" secondItem="ZVx-FI-Y4B" secondAttribute="bottom" constant="5" id="unf-OY-h2T"/>
                         </constraints>
@@ -355,5 +369,6 @@
         <image name="Landing1" width="375" height="667"/>
         <image name="PeopleIcon" width="25" height="25"/>
         <image name="ProfileIcon" width="27" height="27"/>
+        <image name="SelectButton" width="101" height="35"/>
     </resources>
 </document>

@@ -21,9 +21,9 @@ class APIHelper {
     
     let firebaseURL = "https://sfculture.firebaseio.com/"
     
-    typealias getResultHandler = (result: String?, error: String?) -> Void
+    typealias resultHandler = (result: String?, error: String?) -> Void
     
-    func getCultureForUser(userid: String, handler: getResultHandler) {
+    func getCultureForUser(userid: String, handler: resultHandler) {
         ref = Firebase(url: firebaseURL + "users/" + userid)
         ref.queryOrderedByKey().observeEventType(.ChildAdded, withBlock: {
             snapshot in
@@ -38,6 +38,18 @@ class APIHelper {
             }
             handler(result: culture, error: nil)
 
+        })
+    }
+    
+    func setCultureForUser(userid: String, culture: String, handler: resultHandler) {
+        ref = Firebase(url: firebaseURL + "users/" + userid)
+        ref.updateChildValues(["cultures": culture], withCompletionBlock: { error, firebase in
+            if error != nil {
+                handler(result: "", error: error.localizedDescription)
+            }
+            else {
+                handler(result: "", error: "")
+            }
         })
     }
     

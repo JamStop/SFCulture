@@ -8,12 +8,14 @@
 
 import UIKit
 import RxSwift
+import RealmSwift
 
 let screenWidth = UIScreen.mainScreen().bounds.size.width
 
 class CultureSelectionViewController: UIViewController {
     
     private var disposeBag = DisposeBag()
+    private var scrolling = false
     
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -21,7 +23,20 @@ class CultureSelectionViewController: UIViewController {
     
     @IBOutlet weak var cultureName: UILabel!
     
+    let apiHelper = APIHelper()
+    let realm = try! Realm()
+    
     var searching = false
+    
+    @IBAction func selectCultureButtonTapped(sender: UIButton) {
+        if !scrolling {
+            let selectedCulture = cultureName.text
+            let currentUser = self.realm.objects(CurrentUser)[0]
+            apiHelper.setCultureForUser(currentUser.user!.uid, culture: selectedCulture!, handler: {
+                result, error in
+            })
+        }
+    }
     
     override func viewDidLoad() {
         self.view.userInteractionEnabled = true
@@ -128,16 +143,13 @@ extension CultureSelectionViewController: iCarouselDelegate {
 //        if searching == false {
 //            dismissKeyboard()
 //        }
-        
+        scrolling = true
         fadeCultureNameOut()
     }
     
-//    func carouselWillBeginScrollingAnimation(carousel: iCarousel!) {
-//        fadeCultureNameOut()
-//    }
-    
     func carouselDidEndScrollingAnimation(carousel: iCarousel!) {
         fadeCultureNameIn()
+        scrolling = false
     }
     
 

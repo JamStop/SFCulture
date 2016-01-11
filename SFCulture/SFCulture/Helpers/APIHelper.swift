@@ -22,23 +22,53 @@ class APIHelper {
     let firebaseURL = "https://sfculture.firebaseio.com/"
     
     typealias resultHandler = (result: String?, error: String?) -> Void
+    typealias requestHandler = (response: JSON?, error: String?) -> Void
+    typealias JSON = [String: AnyObject]
     
     func getCultureForUser(userid: String, handler: resultHandler) {
-        ref = Firebase(url: firebaseURL + "users/" + userid)
-        ref.queryOrderedByKey().observeEventType(.ChildAdded, withBlock: {
-            snapshot in
-            print(snapshot)
-            guard let complete = snapshot else {
-                handler(result: nil, error: "Error fetching user culture")
-                return
+//        ref = Firebase(url: firebaseURL + "users/" + userid)
+//        ref.queryOrderedByKey().observeEventType(.ChildAdded, withBlock: {
+//            snapshot in
+//            print(snapshot.value)
+//            guard let complete = snapshot.childSnapshotForPath("culture") else {
+//                handler(result: nil, error: "Error fetching user culture")
+//                return
+//            }
+//            guard let culture = complete.value as? String else {
+//                handler(result: nil, error: nil)
+//                return
+//            }
+//            handler(result: culture, error: nil)
+//
+//        })
+        self.get("users/" + userid, handler: {
+            response, err in
+            if err != nil {
+                print(err)
             }
-            guard let culture = snapshot.value["cultures"] as? String else {
-                handler(result: nil, error: nil)
-                return
+            else {
+                guard let culture = response!["culture"] as? String else{
+                    handler(result:nil, error: nil)
+                    return
+                }
+                handler(result: culture, error: nil)
             }
-            handler(result: culture, error: nil)
-
         })
+    }
+    
+    func rx_getCultureForUser(userid: String) -> Observable<String> {
+        return create { observer in
+            self.get("users/" + userid, handler: {
+                response, err in
+                if let culture = response!["culture"]! as? String {
+                    observer.onNext(culture)
+                }
+                observer.onCompleted()
+            })
+            
+            return NopDisposable.instance
+        }
+        
     }
     
     func setCultureForUser(userid: String, culture: String, handler: resultHandler) {
@@ -51,6 +81,41 @@ class APIHelper {
                 handler(result: "", error: "")
             }
         })
+    }
+    
+    private func get(endPoint: String, handler: requestHandler?) {
+        
+        request(.GET, endpoint: endPoint, handler: handler)
+        
+    }
+    
+    private func post(endPoint: String, handler: requestHandler?) {
+        
+        request(.POST, endpoint: endPoint, handler: handler)
+        
+    }
+    
+    private func request(method: Alamofire.Method, endpoint: String, handler: requestHandler?) {
+        
+        let encoding: Alamofire.ParameterEncoding = method == Alamofire.Method.GET ? .URL : .JSON
+        print(firebaseURL + endpoint + ".json")
+        Alamofire.request(method, firebaseURL + endpoint + ".json", encoding: encoding, headers: nil)
+            .responseJSON(options: .AllowFragments) { (Response) -> Void in
+                
+                guard let response = Response.response else {
+                    handler?(response: nil, error: "No Response")
+                    return
+                }
+                    
+                guard let responseJSON = Response.result.value as? JSON else {
+                    handler?(response: nil, error: "Error parsing JSON")
+                    return
+                }
+                handler?(response: responseJSON, error: nil)
+                
+                
+        }
+        
     }
     
 }

@@ -80,7 +80,9 @@ class FirebaseLoginHelper {
                     
                     print(userInfo)
                     
-                    self.ref.childByAppendingPath("users").childByAppendingPath(uid).updateChildValues(userInfo)
+                    let user = [uid: userInfo]
+                    
+                    self.ref.childByAppendingPath("users").updateChildValues(user)
                     
                     print(userData)
                     print(NSURL(string: pictureURL!)!)

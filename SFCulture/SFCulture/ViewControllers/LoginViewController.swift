@@ -51,30 +51,9 @@ class LoginViewController: UIViewController {
                 
                 let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
                 let currentUser = self.realm.objects(CurrentUser)[0]
-                self.apiHelper.getCultureForUser((currentUser.user?.uid)!, handler: { result, error in
-                    if let error = error {
-                        print(error)
-                    }
-                    else {
-//                        if let culture = result {
-                        print(result)
-                        let cultureVC = mainStoryboard.instantiateViewControllerWithIdentifier("checkCulture")
-                        cultureVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
-                        self.presentViewController(cultureVC, animated: true, completion: nil)
-//                        }
-//                        else {
-//                            print(result)
-//                            let cultureSelectVC = mainStoryboard.instantiateViewControllerWithIdentifier("selectCulture")
-//                            cultureSelectVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
-//                            self.presentViewController(cultureSelectVC, animated: true, completion: nil)
-//                        }
-                    }
-                })
-//                if let usersCulture = currentUser.user?.culture {
-//                    let cultureVC = mainStoryboard.instantiateViewControllerWithIdentifier("culture")
-//                    cultureVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
-//                    self.presentViewController(cultureVC, animated: true, completion: nil)
-//                }
+                let cultureVC = mainStoryboard.instantiateViewControllerWithIdentifier("checkCulture")
+                cultureVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+                self.presentViewController(cultureVC, animated: true, completion: nil)
                 
             }
             else {

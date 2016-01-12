@@ -202,7 +202,7 @@
         <!--Culture-->
         <scene sceneID="2Zv-CV-XY3">
             <objects>
-                <viewController id="1hT-i3-YC8" sceneMemberID="viewController">
+                <viewController id="1hT-i3-YC8" customClass="CultureBrowseViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nue-XX-ZQb"/>
                         <viewControllerLayoutGuide type="bottom" id="4Qr-5x-mf7"/>
@@ -214,9 +214,6 @@
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="yBX-ZY-TFZ">
                                 <rect key="frame" x="-4" y="20" width="383" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="1hT-i3-YC8" id="7Tn-9c-LFB"/>
-                                </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MLQ-q1-gPi">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
@@ -322,6 +319,8 @@
                     <tabBarItem key="tabBarItem" title="Culture" image="PeopleIcon" id="Zcu-de-zsZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="profileCollectionView" destination="MLQ-q1-gPi" id="uDF-UZ-n7p"/>
+                        <outlet property="searchBar" destination="yBX-ZY-TFZ" id="O6b-2O-yet"/>
                         <outlet property="searchDisplayController" destination="V4R-Qm-vn1" id="qt3-mr-QDz"/>
                     </connections>
                 </viewController>
@@ -329,7 +328,6 @@
                 <searchDisplayController id="V4R-Qm-vn1">
                     <connections>
                         <outlet property="delegate" destination="1hT-i3-YC8" id="Rab-Ae-0c3"/>
-                        <outlet property="searchBar" destination="yBX-ZY-TFZ" id="kPc-SE-89g"/>
                         <outlet property="searchContentsController" destination="1hT-i3-YC8" id="rlM-iM-Nna"/>
                         <outlet property="searchResultsDataSource" destination="1hT-i3-YC8" id="CXC-1c-bdC"/>
                         <outlet property="searchResultsDelegate" destination="1hT-i3-YC8" id="Sbf-go-kYs"/>

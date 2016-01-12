@@ -39,11 +39,15 @@ class Culture: Object {
     dynamic var members: [User] {
         return linkingObjects(User.self, forProperty: "culture")
     }
+    dynamic var messageGroups: [MessageGroup] {
+        return linkingObjects(MessageGroup.self, forProperty: "culture")
+    }
     
 }
 
 class MessageGroup: Object {
     dynamic var id = ""
+    dynamic var culture: Culture?
     dynamic var messages: [Message] {
         return linkingObjects(Message.self, forProperty: "messageGroup")
     }

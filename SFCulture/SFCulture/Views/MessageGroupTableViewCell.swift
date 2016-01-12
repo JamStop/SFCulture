@@ -9,6 +9,9 @@
 import UIKit
 
 class MessageGroupTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileName: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

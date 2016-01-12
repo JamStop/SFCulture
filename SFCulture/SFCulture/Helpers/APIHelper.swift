@@ -25,6 +25,8 @@ class APIHelper {
     typealias requestHandler = (response: JSON?, error: String?) -> Void
     typealias JSON = [String: AnyObject]
     
+//    func getUsersForCulture(
+    
     func getCultureForUser(userid: String, handler: resultHandler) {
 //        ref = Firebase(url: firebaseURL + "users/" + userid)
 //        ref.queryOrderedByKey().observeEventType(.ChildAdded, withBlock: {
@@ -73,6 +75,9 @@ class APIHelper {
     
     func setCultureForUser(userid: String, culture: String, handler: resultHandler) {
         ref = Firebase(url: firebaseURL + "users/" + userid)
+        let firebaseCulturesRef = Firebase(url: firebaseURL)
+        let newCulture = [culture: ["user": userid]]
+        firebaseCulturesRef.childByAppendingPath("cultures").updateChildValues(newCulture)
         ref.updateChildValues(["culture": culture], withCompletionBlock: { error, firebase in
             if error != nil {
                 handler(result: "", error: error.localizedDescription)

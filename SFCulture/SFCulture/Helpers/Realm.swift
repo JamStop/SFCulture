@@ -13,6 +13,7 @@ class User: Object {
     dynamic var uid = ""
     dynamic var name = ""
     dynamic var profilePicture: NSData?
+    dynamic var profilePictureURL: String?
     dynamic var culture: Culture?
     let messageGroups = List<MessageGroup>()
     

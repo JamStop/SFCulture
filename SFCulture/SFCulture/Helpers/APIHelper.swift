@@ -59,7 +59,7 @@ class APIHelper {
     }
     
     func rx_getCultureForUser(userid: String) -> Observable<String> {
-        return create { observer in
+        return Observable.create { observer in
             self.get("users/" + userid, handler: {
                 response, err in
                 if let culture = response!["culture"]! as? String {
@@ -73,11 +73,17 @@ class APIHelper {
         
     }
     
-    func setCultureForUser(userid: String, culture: String, handler: resultHandler) {
-        ref = Firebase(url: firebaseURL + "users/" + userid)
+    func setCultureForUser(user: User, culture: String, handler: resultHandler) {
+        ref = Firebase(url: firebaseURL + "users/" + user.uid)
         let firebaseCulturesRef = Firebase(url: firebaseURL)
-        let newCulture = [culture: ["user": userid]]
-        firebaseCulturesRef.childByAppendingPath("cultures").updateChildValues(newCulture)
+        let newUser = [
+            "name": user.name,
+            "profilePicture": user.profilePictureURL!
+            ]
+        let newCulture = [
+            user.uid: newUser
+            ]
+        firebaseCulturesRef.childByAppendingPath("cultures").childByAppendingPath(culture).updateChildValues(newCulture)
         ref.updateChildValues(["culture": culture], withCompletionBlock: { error, firebase in
             if error != nil {
                 handler(result: "", error: error.localizedDescription)
@@ -87,6 +93,11 @@ class APIHelper {
             }
         })
     }
+    
+//    func rx_getUsersInCulture(culture: String) -> Observable<JSON> {
+//        ref = Firebase(url: firebaseURL)
+//        
+//    }
     
     private func get(endPoint: String, handler: requestHandler?) {
         

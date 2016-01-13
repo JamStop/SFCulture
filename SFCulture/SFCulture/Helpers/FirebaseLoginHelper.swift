@@ -96,7 +96,8 @@ class FirebaseLoginHelper {
                             let newUser = User(value: [
                                 "uid": uid,
                                 "name": userData["name"]!,
-                                "profilePicture": data
+                                "profilePicture": data,
+                                "profilePictureURL": pictureURL!
                             ])
                             
                             let newCurrentUser = CurrentUser(value: [newUser, 0])

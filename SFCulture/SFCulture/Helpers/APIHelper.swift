@@ -94,10 +94,24 @@ class APIHelper {
         })
     }
     
-//    func rx_getUsersInCulture(culture: String) -> Observable<JSON> {
-//        ref = Firebase(url: firebaseURL)
-//        
-//    }
+    func rx_getUsersInCulture(culture: String) -> Observable<JSON> {
+        ref = Firebase(url: firebaseURL)
+        return Observable.create { observer in
+            self.ref.childByAppendingPath("cultures").childByAppendingPath(culture).queryOrderedByChild("name").observeEventType(.ChildAdded, withBlock: { snapshot in
+                
+                guard let userJSON = snapshot.value as? JSON else {
+                    return
+                }
+                
+                print(userJSON)
+                
+                
+                
+            })
+            return NopDisposable.instance
+        }
+        
+    }
     
     private func get(endPoint: String, handler: requestHandler?) {
         

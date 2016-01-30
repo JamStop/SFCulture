@@ -25,6 +25,8 @@ class APIHelper {
     typealias requestHandler = (response: JSON?, error: String?) -> Void
     typealias JSON = [String: AnyObject]
     
+//    func getUsersForCulture(
+    
     func getCultureForUser(userid: String, handler: resultHandler) {
 //        ref = Firebase(url: firebaseURL + "users/" + userid)
 //        ref.queryOrderedByKey().observeEventType(.ChildAdded, withBlock: {
@@ -57,7 +59,7 @@ class APIHelper {
     }
     
     func rx_getCultureForUser(userid: String) -> Observable<String> {
-        return create { observer in
+        return Observable.create { observer in
             self.get("users/" + userid, handler: {
                 response, err in
                 if let culture = response!["culture"]! as? String {
@@ -71,8 +73,17 @@ class APIHelper {
         
     }
     
-    func setCultureForUser(userid: String, culture: String, handler: resultHandler) {
-        ref = Firebase(url: firebaseURL + "users/" + userid)
+    func setCultureForUser(user: User, culture: String, handler: resultHandler) {
+        ref = Firebase(url: firebaseURL + "users/" + user.uid)
+        let firebaseCulturesRef = Firebase(url: firebaseURL)
+        let newUser = [
+            "name": user.name,
+            "profilePicture": user.profilePictureURL!
+            ]
+        let newCulture = [
+            user.uid: newUser
+            ]
+        firebaseCulturesRef.childByAppendingPath("cultures").childByAppendingPath(culture).updateChildValues(newCulture)
         ref.updateChildValues(["culture": culture], withCompletionBlock: { error, firebase in
             if error != nil {
                 handler(result: "", error: error.localizedDescription)
@@ -81,6 +92,25 @@ class APIHelper {
                 handler(result: "", error: "")
             }
         })
+    }
+    
+    func rx_getUsersInCulture(culture: String) -> Observable<JSON> {
+        ref = Firebase(url: firebaseURL)
+        return Observable.create { observer in
+            self.ref.childByAppendingPath("cultures").childByAppendingPath(culture).queryOrderedByChild("name").observeEventType(.ChildAdded, withBlock: { snapshot in
+                
+                guard let userJSON = snapshot.value as? JSON else {
+                    return
+                }
+                
+                print(userJSON)
+                
+                
+                
+            })
+            return NopDisposable.instance
+        }
+        
     }
     
     private func get(endPoint: String, handler: requestHandler?) {

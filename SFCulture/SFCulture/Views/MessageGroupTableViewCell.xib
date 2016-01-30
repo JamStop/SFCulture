@@ -3,16 +3,43 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UITableViewCell">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MessageGroupTableViewCell" customModule="SFCulture" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="484" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u4x-4W-E3T">
+                    <rect key="frame" x="15" y="15" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="u4x-4W-E3T" secondAttribute="height" multiplier="1:1" id="C5n-5a-QWx"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muhammed Othman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zNc-cL-6cS">
+                    <rect key="frame" x="100" y="38" width="369" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zNc-cL-6cS" secondAttribute="trailing" constant="15" id="7Yx-ep-zJf"/>
+                <constraint firstItem="u4x-4W-E3T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="EAg-DM-XSz"/>
+                <constraint firstItem="u4x-4W-E3T" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="LyJ-BL-QiI"/>
+                <constraint firstItem="zNc-cL-6cS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Tqw-md-gdR"/>
+                <constraint firstAttribute="bottom" secondItem="u4x-4W-E3T" secondAttribute="bottom" constant="15" id="bZx-Hw-2kk"/>
+                <constraint firstItem="zNc-cL-6cS" firstAttribute="leading" secondItem="u4x-4W-E3T" secondAttribute="trailing" constant="15" id="wtw-1e-z5P"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="profileImageView" destination="u4x-4W-E3T" id="ObZ-FQ-HbI"/>
+                <outlet property="profileName" destination="zNc-cL-6cS" id="B3Z-v4-2XA"/>
+            </connections>
             <point key="canvasLocation" x="186" y="-19"/>
         </view>
     </objects>

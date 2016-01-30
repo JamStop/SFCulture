@@ -84,11 +84,11 @@ class CultureSelectionViewController: UIViewController {
     }
     
     func configureSearchBar() {
-        let scheduler = MainScheduler.sharedInstance
+//        let scheduler = MainScheduler.instance
         
         searchBar.rx_text
             .asDriver()
-            .throttle(0.3, scheduler)
+            .throttle(0.3)
             .distinctUntilChanged()
             .driveNext { query in
                 let index = self.searchQuery(query)
@@ -158,7 +158,7 @@ extension CultureSelectionViewController: iCarouselDelegate {
     func selectCulture() {
         let selectedCulture = cultureName.text
         let currentUser = self.realm.objects(CurrentUser)[0]
-        apiHelper.setCultureForUser(currentUser.user!.uid, culture: selectedCulture!, handler: {
+        apiHelper.setCultureForUser(currentUser.user!, culture: selectedCulture!, handler: {
             result, error in
             if error != "" {
                 print("Failed fetching data")

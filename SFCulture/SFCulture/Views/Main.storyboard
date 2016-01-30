@@ -128,7 +128,7 @@
         <!--Chat-->
         <scene sceneID="J63-Hg-VkY">
             <objects>
-                <viewController id="2T6-wP-axJ" sceneMemberID="viewController">
+                <viewController id="2T6-wP-axJ" customClass="MessageBrowseViewController" customModule="SFCulture" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DLd-J0-Uj4"/>
                         <viewControllerLayoutGuide type="bottom" id="qfr-TP-hCZ"/>

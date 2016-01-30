@@ -80,9 +80,9 @@ class FirebaseLoginHelper {
                     
                     print(userInfo)
                     
-                    let user = [uid: userInfo]
+//                    let user = [uid: userInfo]
                     
-                    self.ref.childByAppendingPath("users").updateChildValues(user)
+                    self.ref.childByAppendingPath("users").childByAppendingPath(uid).updateChildValues(userInfo)
                     
                     print(userData)
                     print(NSURL(string: pictureURL!)!)
@@ -96,7 +96,8 @@ class FirebaseLoginHelper {
                             let newUser = User(value: [
                                 "uid": uid,
                                 "name": userData["name"]!,
-                                "profilePicture": data
+                                "profilePicture": data,
+                                "profilePictureURL": pictureURL!
                             ])
                             
                             let newCurrentUser = CurrentUser(value: [newUser, 0])

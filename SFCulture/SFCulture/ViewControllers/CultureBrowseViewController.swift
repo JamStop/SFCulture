@@ -20,3 +20,11 @@ class CultureBrowseViewController: UIViewController {
 
 
 }
+
+extension CultureBrowseViewController: UICollectionViewDelegate {
+    
+}
+
+//extension CultureBrowseViewController: UICollectionViewDataSource {
+//    
+//}

@@ -12,6 +12,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 #endif
+import SDWebImage
 
 class ProfileCollectionViewCell: UICollectionViewCell {
     
@@ -46,10 +47,16 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         return view
     }
     
-    init(frame: CGRect, culture: String, index: Int) {
+    init(frame: CGRect,  imageUrl: String, profileName: String, profileCaption: String) {
         super.init(frame: frame)
         
         xibSetup()
+        
+        name.text = profileName
+        caption.text = profileCaption
+        
+        profileImage.sd_setImageWithURL(NSURL(string: imageUrl))
+        
     }
     
 }
